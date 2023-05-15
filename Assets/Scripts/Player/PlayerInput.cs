@@ -6,7 +6,6 @@ using UnityEngine.Events;
 public class PlayerInput : MonoBehaviour
 {
     [SerializeField] private UnityEvent<Vector3> _playerInput;
-    [SerializeField] private UnityEvent _playerJump;
 
     public void InputMove()
     {
@@ -14,5 +13,11 @@ public class PlayerInput : MonoBehaviour
         float ver = Input.GetAxis("Vertical");
 
         Vector3 value = new Vector3(hor, 0, ver);
+        _playerInput?.Invoke(value);
+    }
+
+    private void Update()
+    {
+        InputMove();
     }
 }
