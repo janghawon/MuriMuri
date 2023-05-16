@@ -41,12 +41,12 @@ public class PlayerMove : MonoBehaviour
     private void CalculatorMove()
     {
         _moveDir.Normalize();
-
         _moveDir *= _playerSpeed * Time.fixedDeltaTime;
        
         if (canMove)
         {
-            Vector3 move = _moveDir + _verticalVelocity * Vector3.up;
+            Vector3 moveDirection = Quaternion.Euler(0, GameManager.Instance.mainCam.transform.eulerAngles.y, 0) * _moveDir;
+            Vector3 move = moveDirection + _verticalVelocity * Vector3.up;
             _playerController.Move(move);
         }
     }
