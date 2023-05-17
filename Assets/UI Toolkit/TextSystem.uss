@@ -1,2 +1,17 @@
-.panelSet {
+.PanelSet {
+    background-color: rgba(0, 0, 0, 0.77);
+    width: 90%;
+    height: 350px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    top: 650px;
+    transition-property: margin-top;
+    transition-duration: 0.5s;
+    margin-top: 500px;
+}
+
+.PanelSet.on {
+    margin-top: 0;
 }

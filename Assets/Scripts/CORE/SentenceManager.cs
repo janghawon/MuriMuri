@@ -5,14 +5,12 @@ using UnityEngine.UIElements;
 
 public class SentenceManager : MonoBehaviour
 {
-    public static SentenceManager Instance; 
-
+    public static SentenceManager Instance;
+    public TextSystem textSystem;
     [SerializeField] private List<SentenceSO> SentenceList = new List<SentenceSO>();
     SentenceSO currentSO;
 
     int storyCount = 0;
-
-    bool isOnPanel;
 
     private void Awake()
     {
@@ -21,12 +19,13 @@ public class SentenceManager : MonoBehaviour
             Debug.LogError("!!!");
         }
         Instance = this;
+        textSystem = GameObject.Find("UICANVAS").GetComponent<TextSystem>();
         DontDestroyOnLoad(this);
     }
 
     public void SentenceNext()
     {
-        // ¶ç¿ì±â
+        // ´ÙÀ½
 
         if(currentSO.SentenceList.Count == storyCount)
         {
@@ -38,9 +37,12 @@ public class SentenceManager : MonoBehaviour
         }
     }
 
-    public void OnPanel()
+    private void Update()
     {
-        isOnPanel = true;
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            textSystem.SetPanel();
+        }
     }
 
     public void SentenceRender()
@@ -48,6 +50,5 @@ public class SentenceManager : MonoBehaviour
         storyCount = 0;
         currentSO = SentenceList[0];
         SentenceList.RemoveAt(0);
-        isOnPanel = false;
     }
 }
