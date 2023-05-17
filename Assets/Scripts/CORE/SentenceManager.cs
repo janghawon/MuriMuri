@@ -11,7 +11,7 @@ public class SentenceManager : MonoBehaviour
     SentenceSO currentSO;
 
     int storyCount = 0;
-
+    bool isOnPanel;
     private void Awake()
     {
         if(Instance != null)
@@ -23,9 +23,10 @@ public class SentenceManager : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
-    public void SentenceNext()
+    public void NextSentence()
     {
-        // ¥Ÿ¿Ω
+        textSystem.TextRendering(currentSO.SentenceList[storyCount].nameText, 
+                                 currentSO.SentenceList[storyCount].sentencetext);
 
         if(currentSO.SentenceList.Count == storyCount)
         {
@@ -37,12 +38,10 @@ public class SentenceManager : MonoBehaviour
         }
     }
 
-    private void Update()
+    public void SetPanel()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            textSystem.SetPanel();
-        }
+        textSystem.SetPanel(isOnPanel);
+        isOnPanel = !isOnPanel;
     }
 
     public void SentenceRender()
@@ -50,5 +49,21 @@ public class SentenceManager : MonoBehaviour
         storyCount = 0;
         currentSO = SentenceList[0];
         SentenceList.RemoveAt(0);
+        StartEmotion();
+    }
+
+    private void Start()
+    {
+        currentSO = SentenceList[0];
+        StartEmotion();
+    }
+
+    private void StartEmotion()
+    {
+        for(int i = 0; i < currentSO.STARTEMOTION.Count; i++)
+        {
+            CharacterManager.Instance.SetEmotion(currentSO.STARTEMOTION[i].character,
+                                                 currentSO.STARTEMOTION[i].emotion);
+        }
     }
 }

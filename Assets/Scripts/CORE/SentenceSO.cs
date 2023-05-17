@@ -4,6 +4,13 @@ using UnityEngine;
 using CharacterCore;
 
 [System.Serializable]
+public struct StartEmotion
+{
+    public CharacterType character;
+    public EmotionType emotion;
+}
+
+[System.Serializable]
 public struct EmotionDum
 {
     public CharacterType character;
@@ -23,5 +30,6 @@ public struct TextDum
 [CreateAssetMenu(menuName ="SO/SentenceSO")]
 public class SentenceSO : ScriptableObject
 {
+    public List<StartEmotion> STARTEMOTION = new List<StartEmotion>();
     public List<TextDum> SentenceList = new List<TextDum>();
 }

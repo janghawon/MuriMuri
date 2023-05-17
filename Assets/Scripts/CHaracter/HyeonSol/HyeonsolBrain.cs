@@ -15,4 +15,28 @@ public class HyeonsolBrain : CharacterBrain
         _animator.SetFloat("EmotionCount", emotionNum);
         _animator.SetBool("isEmotion", true);
     }
+
+    private void Update()
+    {
+        if(canChecking)
+        {
+            Collider[] hit = Physics.OverlapBox(transform.position, transform.lossyScale * 5 / 2, Quaternion.identity, _whatIsPlayer);
+
+            foreach (Collider hited in hit)
+            {
+                PlayerMove playerMove = hited.GetComponent<PlayerMove>();
+                PlayerCamera camera = hited.GetComponent<PlayerCamera>();
+
+                playerMove.canMove = false;
+                camera.canMoveCam = false;
+                canChecking = false;
+            }
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(transform.position + transform.up * 0.5f, transform.lossyScale * 5);
+    }
 }

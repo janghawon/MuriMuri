@@ -8,7 +8,8 @@ public class TextSystem : MonoBehaviour
     private UIDocument _uiDocument;
     VisualElement root;
     VisualElement panel;
-    bool isOnPanel;
+    Label nameTxt;
+    Label sentenceTxt;
     private void Awake()
     {
         _uiDocument = GetComponent<UIDocument>();
@@ -18,9 +19,17 @@ public class TextSystem : MonoBehaviour
     {
         root = _uiDocument.rootVisualElement;
         panel = root.Q<VisualElement>("Panel");
+        nameTxt = root.Q<Label>("NameText");
+        sentenceTxt = root.Q<Label>("sentenceText");
     }
 
-    public void SetPanel()
+    public void TextRendering(string name, string sentence)
+    {
+        nameTxt.text = name;
+        sentenceTxt.text = sentence;
+    }
+
+    public void SetPanel(bool isOnPanel)
     {
         if(isOnPanel)
         {
@@ -30,6 +39,5 @@ public class TextSystem : MonoBehaviour
         {
             panel.AddToClassList("on");
         }
-        isOnPanel = !isOnPanel;
     }
 }
