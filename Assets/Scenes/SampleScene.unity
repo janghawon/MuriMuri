@@ -417,6 +417,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mouseSpeed: 10
+  canMoveCam: 1
 --- !u!1 &514955384
 GameObject:
   m_ObjectHideFlags: 0

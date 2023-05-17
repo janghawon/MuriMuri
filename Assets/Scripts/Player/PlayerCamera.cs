@@ -8,6 +8,7 @@ public class PlayerCamera : MonoBehaviour
     private float _mouseXInput;
     private float _mouseYInput;
 
+    public bool canMoveCam = true;
     public void SetMouse(float _mouseX, float _mouseY)
     {
         _mouseXInput = _mouseX * _mouseSpeed;
@@ -15,7 +16,8 @@ public class PlayerCamera : MonoBehaviour
     }
     public void PlayerMouseCal()
     {
-        GameManager.Instance.mainCam.gameObject.transform.rotation = Quaternion.Euler(-_mouseYInput, _mouseXInput, 0);
+        if(canMoveCam)
+            GameManager.Instance.mainCam.gameObject.transform.rotation = Quaternion.Euler(-_mouseYInput, _mouseXInput, 0);
     }
 
     private void Update()
