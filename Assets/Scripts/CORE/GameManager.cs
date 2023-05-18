@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 using CharacterCore;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject Player;
     public static GameManager Instance;
     public GameObject mainCam;
     private void Awake()
@@ -18,6 +20,14 @@ public class GameManager : MonoBehaviour
             Instance = this;
         }
         Cursor.visible = false;
+        Player = GameObject.Find("Player");
         DontDestroyOnLoad(this);
+    }
+
+    public void SetConversationBefore(GameObject angleObj)
+    {
+        Vector3 dir = angleObj.transform.position - mainCam.transform.position;
+        dir += new Vector3(5, 0, 0);
+        mainCam.transform.rotation = Quaternion.LookRotation(dir);
     }
 }

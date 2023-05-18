@@ -20,7 +20,7 @@ public class HyeonsolBrain : CharacterBrain
     {
         if(canChecking)
         {
-            Collider[] hit = Physics.OverlapBox(transform.position, transform.lossyScale * 5 / 2, Quaternion.identity, _whatIsPlayer);
+            Collider[] hit = Physics.OverlapBox(transform.position, (transform.lossyScale * 5) / 2, Quaternion.identity, _whatIsPlayer);
 
             foreach (Collider hited in hit)
             {
@@ -29,10 +29,14 @@ public class HyeonsolBrain : CharacterBrain
 
                 playerMove.canMove = false;
                 camera.canMoveCam = false;
+                GameManager.Instance.SetConversationBefore(this.gameObject);
+                LookPlayer(GameManager.Instance.mainCam);
                 canChecking = false;
             }
         }
     }
+
+    
 
     private void OnDrawGizmos()
     {
