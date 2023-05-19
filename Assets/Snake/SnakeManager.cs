@@ -6,9 +6,12 @@ public class SnakeManager : MonoBehaviour
 {
     private Transform _snake = null;
     private List<Transform> snakes = new List<Transform>();
+    private BackGround _bg;
 
     [SerializeField] private float _width = 1f;
-    [SerializeField] private float _speed = 5f;
+    [SerializeField] private float _range = 0.1f;
+    [SerializeField] private float _speed = 3f;
+    [SerializeField] private float _moveSpeed = 2f;
     float[] timers;
     private void Awake()
     {
@@ -19,6 +22,7 @@ public class SnakeManager : MonoBehaviour
             snakes.Add(_snake.Find("Visual").GetChild(i));
             timers[i] = 0f;
         }
+        _bg = GameObject.Find("BGManager").GetComponent<BackGround>();
     }
 
     private void Start()
@@ -31,7 +35,7 @@ public class SnakeManager : MonoBehaviour
         for (int i = 0; i < snakes.Count; i++)
         {
             StartCoroutine(SSSNake(snakes[i], i));
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(_range);
         }
     }
 
@@ -39,9 +43,9 @@ public class SnakeManager : MonoBehaviour
     {
         while(true)
         {
-            
-            obj.transform.position = new Vector3(Mathf.Sin(timers[idx] * 3) * _width, obj.transform.position.y);
-            timers[idx] += Time.deltaTime;
+            obj.transform.position = new Vector3(Mathf.Sin(timers[idx] * _speed) * _width, obj.transform.position.y);
+            timers[idx] += Time.fixedDeltaTime;
+            _snake.transform.Translate(new Vector3(0, _moveSpeed * 0.001f, 0));
             yield return null;
         }
     }
