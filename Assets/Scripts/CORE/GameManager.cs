@@ -27,7 +27,12 @@ public class GameManager : MonoBehaviour
     public void SetConversationBefore(GameObject angleObj)
     {
         Vector3 dir = angleObj.transform.position - mainCam.transform.position;
-        dir += new Vector3(5, 0, 0);
+        dir += new Vector3(0, 1, 0);
         mainCam.transform.rotation = Quaternion.LookRotation(dir);
+        //mainCam.transform.rotation = Quaternion.Euler(
+        //                             new Vector3(mainCam.transform.rotation.x + 5,
+        //                                         mainCam.transform.rotation.y,
+        //                                         mainCam.transform.rotation.z));
+        //mainCam.transform.rotation = Quaternion.Lerp(mainCam.transform.rotation, Quaternion.LookRotation(dir), Time.deltaTime * 2);
     }
 }

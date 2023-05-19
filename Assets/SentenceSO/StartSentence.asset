@@ -15,11 +15,20 @@ MonoBehaviour:
   STARTEMOTION:
   - character: 0
     emotion: 4
+  - character: 1
+    emotion: 1
   SentenceList:
-  - nameText: 
-    sentencetext: 
+  - nameText: dd
+    sentencetext: dddddd
     useEmotion: 0
     EmotionSetting:
-      character: 0
+    - character: 0
+      emotion: 0
+    Event: {fileID: 0}
+  - nameText: dd
+    sentencetext: dddddd
+    useEmotion: 0
+    EmotionSetting:
+    - character: 0
       emotion: 0
     Event: {fileID: 0}

@@ -1,7 +1,7 @@
 .PanelSet {
     background-color: rgba(0, 0, 0, 0.77);
     width: 90%;
-    height: 350px;
+    height: 300px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     border-top-right-radius: 20px;

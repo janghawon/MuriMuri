@@ -1,12 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class SentenceManager : MonoBehaviour
 {
     public static SentenceManager Instance;
-    public TextSystem textSystem;
+    TextSystem textSystem;
     [SerializeField] private List<SentenceSO> SentenceList = new List<SentenceSO>();
     SentenceSO currentSO;
 
@@ -28,6 +27,21 @@ public class SentenceManager : MonoBehaviour
         textSystem.TextRendering(currentSO.SentenceList[storyCount].nameText, 
                                  currentSO.SentenceList[storyCount].sentencetext);
 
+        if(currentSO.SentenceList[storyCount].useEmotion)
+        {
+            for(int i = 0; i < currentSO.SentenceList[storyCount].EmotionSetting.Count; i++)
+            {
+                CharacterManager.Instance.SetEmotion(currentSO.SentenceList[storyCount].EmotionSetting[i].character,
+                                                 currentSO.SentenceList[storyCount].EmotionSetting[i].emotion);
+            }
+        }
+        else
+        {
+            for (int i = 0; i < currentSO.SentenceList[storyCount].EmotionSetting.Count; i++)
+            {
+                CharacterManager.Instance.ExitEmotion(currentSO.SentenceList[storyCount].EmotionSetting[i].character);
+            }
+        }
         if(currentSO.SentenceList.Count == storyCount)
         {
             SentenceRender();

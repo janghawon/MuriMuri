@@ -5,6 +5,21 @@ using UnityEngine;
 
 public class HyeonsolBrain : CharacterBrain
 {
+    HyeonsolAction _hyeonsolAction;
+    int actionNum = 0;
+    private void Awake()
+    {
+        _animator = GetComponent<Animator>();
+        _hyeonsolAction = GetComponent<HyeonsolAction>();
+        canChecking = true;
+    }
+
+    public void SetAction()
+    {
+        _hyeonsolAction.ActionDataList[actionNum]?.Invoke();
+        actionNum++;
+    }
+
     public override void OffEmotion()
     {
         _animator.SetBool("isEmotion", false);
@@ -29,14 +44,15 @@ public class HyeonsolBrain : CharacterBrain
 
                 playerMove.canMove = false;
                 camera.canMoveCam = false;
+
                 GameManager.Instance.SetConversationBefore(this.gameObject);
                 LookPlayer(GameManager.Instance.mainCam);
                 canChecking = false;
+
+                SetAction();
             }
         }
     }
-
-    
 
     private void OnDrawGizmos()
     {

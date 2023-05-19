@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using CharacterCore;
 
 [System.Serializable]
@@ -17,13 +18,26 @@ public struct EmotionDum
     public EmotionType emotion;
 }
 
+public struct PhaseEvent
+{
+    public bool usePhaseEvent;
+    public CharacterType character;
+}
+
+public struct CustomEvent
+{
+    public bool useCustomEvent;
+    public UnityEvent customEvent;
+}
+
 [System.Serializable]
-public struct TextDum
+public class TextDum
 {
     public string nameText;
     public string sentencetext;
     public bool useEmotion;
-    public EmotionDum EmotionSetting;
+    public List<EmotionDum> EmotionSetting = new List<EmotionDum>();
+    public PhaseEvent PhaseEvent;
     public EventSO Event;
 }
 

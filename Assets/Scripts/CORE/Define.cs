@@ -6,7 +6,8 @@ namespace CharacterCore
 {
     public enum CharacterType
     {
-        Hyeonsol = 0
+        Hyeonsol = 0,
+        SulA = 1
     }
 
     public enum EmotionType
@@ -14,7 +15,8 @@ namespace CharacterCore
         backhand = 1,
         embarass = 2,
         surprise = 3,
-        armhang = 4
+        armhang = 4,
+        angry = 5
     }
 }
 
