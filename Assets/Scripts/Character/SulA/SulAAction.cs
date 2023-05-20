@@ -6,6 +6,4 @@ using UnityEngine.Events;
 public class SulAAction : MonoBehaviour
 {
     public List<UnityEvent> ActionDataList = new List<UnityEvent>();
-
-   
 }

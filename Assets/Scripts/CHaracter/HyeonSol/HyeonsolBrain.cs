@@ -49,7 +49,9 @@ public class HyeonsolBrain : CharacterBrain
                 LookPlayer(GameManager.Instance.mainCam);
                 canChecking = false;
 
-                SetAction();
+                SentenceManager.Instance.SetPanel();
+                SentenceManager.Instance.NextSentence();
+                Cursor.visible = true;
             }
         }
     }

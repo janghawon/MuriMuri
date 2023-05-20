@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using CharacterCore;
 
 public class SentenceManager : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class SentenceManager : MonoBehaviour
 
     int storyCount = 0;
     bool isOnPanel;
+
+    HyeonsolBrain hb;
+    SulABrain sb;
     private void Awake()
     {
         if(Instance != null)
@@ -27,7 +31,8 @@ public class SentenceManager : MonoBehaviour
         textSystem.TextRendering(currentSO.SentenceList[storyCount].nameText, 
                                  currentSO.SentenceList[storyCount].sentencetext);
 
-        if(currentSO.SentenceList[storyCount].useEmotion)
+        #region 감정 사용
+        if (currentSO.SentenceList[storyCount].useEmotion)
         {
             for(int i = 0; i < currentSO.SentenceList[storyCount].EmotionSetting.Count; i++)
             {
@@ -42,7 +47,27 @@ public class SentenceManager : MonoBehaviour
                 CharacterManager.Instance.ExitEmotion(currentSO.SentenceList[storyCount].EmotionSetting[i].character);
             }
         }
-        if(currentSO.SentenceList.Count == storyCount)
+        #endregion
+        #region 이벤트
+        if (currentSO.SentenceList[storyCount].CustomEvent.useCustomEvent)
+        {
+            currentSO.SentenceList[storyCount].CustomEvent.customEvent?.Invoke();
+        }
+        if (currentSO.SentenceList[storyCount].PhaseEvent.usePhaseEvent)
+        {
+            if(currentSO.SentenceList[storyCount].PhaseEvent.character == CharacterType.Hyeonsol)
+            {
+                Debug.Log(1);
+                hb.SetAction();
+            }
+            else if (currentSO.SentenceList[storyCount].PhaseEvent.character == CharacterType.SulA)
+            {
+                sb.SetAction();
+            }
+        }
+        #endregion
+        #region SO갈아끼우기
+        if (currentSO.SentenceList.Count == storyCount)
         {
             SentenceRender();
         }
@@ -50,6 +75,7 @@ public class SentenceManager : MonoBehaviour
         {
             storyCount++;
         }
+        #endregion
     }
 
     public void SetPanel()
@@ -68,6 +94,8 @@ public class SentenceManager : MonoBehaviour
 
     private void Start()
     {
+        hb = CharacterManager.Instance.Hyeonsol.GetComponent<HyeonsolBrain>();
+        sb = CharacterManager.Instance.SulA.GetComponent<SulABrain>();
         currentSO = SentenceList[0];
         StartEmotion();
     }

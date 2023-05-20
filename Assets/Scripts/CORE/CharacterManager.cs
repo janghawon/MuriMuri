@@ -9,8 +9,8 @@ public class CharacterManager : MonoBehaviour
     NavMeshAgent _navMesh;
     public static CharacterManager Instance;
     CharacterBrain _characterBrain;
-    [SerializeField] private GameObject _hyeonsolObject;
-    [SerializeField] private GameObject _sulAObject;
+    public GameObject Hyeonsol;
+    public GameObject SulA;
     private void Awake()
     {
         if(Instance != null)
@@ -19,19 +19,21 @@ public class CharacterManager : MonoBehaviour
         }
         Instance = this;
         DontDestroyOnLoad(this);
+        Hyeonsol = GameObject.Find("Hyeonsol");
+        SulA = GameObject.Find("SulA");
     }
 
-    public void MoveSet(CharacterType type, Vector3 targetPos, float time)
+    public void MoveSet(CharacterType type, Vector3 targetPos, float speed)
     {
         if(type == CharacterType.Hyeonsol)
         {
-            _navMesh = _hyeonsolObject.GetComponent<NavMeshAgent>();
+            _navMesh = Hyeonsol.GetComponent<NavMeshAgent>();
         }
         else
         {
-            _navMesh = _sulAObject.GetComponent<NavMeshAgent>();
+            _navMesh = SulA.GetComponent<NavMeshAgent>();
         }
-
+        _navMesh.speed = speed;
         _navMesh.SetDestination(targetPos);
     }
 
@@ -54,10 +56,10 @@ public class CharacterManager : MonoBehaviour
         switch (selectType)
         {
             case CharacterType.Hyeonsol:
-                _characterBrain = _hyeonsolObject.GetComponent<HyeonsolBrain>();
+                _characterBrain = Hyeonsol.GetComponent<HyeonsolBrain>();
                 break;
             case CharacterType.SulA:
-                _characterBrain = _sulAObject.GetComponent<SulABrain>();
+                _characterBrain = SulA.GetComponent<SulABrain>();
                 break;
         }
     }

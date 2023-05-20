@@ -18,13 +18,15 @@ public struct EmotionDum
     public EmotionType emotion;
 }
 
-public struct PhaseEvent
+[System.Serializable]
+public class PhaseEvent
 {
     public bool usePhaseEvent;
     public CharacterType character;
 }
 
-public struct CustomEvent
+[System.Serializable]
+public class CustomEvent
 {
     public bool useCustomEvent;
     public UnityEvent customEvent;
@@ -38,6 +40,7 @@ public class TextDum
     public bool useEmotion;
     public List<EmotionDum> EmotionSetting = new List<EmotionDum>();
     public PhaseEvent PhaseEvent;
+    public CustomEvent CustomEvent;
     public EventSO Event;
 }
 

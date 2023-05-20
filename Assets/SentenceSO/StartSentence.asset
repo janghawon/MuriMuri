@@ -24,11 +24,12 @@ MonoBehaviour:
     EmotionSetting:
     - character: 0
       emotion: 0
-    Event: {fileID: 0}
-  - nameText: dd
-    sentencetext: dddddd
-    useEmotion: 0
-    EmotionSetting:
-    - character: 0
-      emotion: 0
+    PhaseEvent:
+      usePhaseEvent: 1
+      character: 0
+    CustomEvent:
+      useCustomEvent: 0
+      customEvent:
+        m_PersistentCalls:
+          m_Calls: []
     Event: {fileID: 0}

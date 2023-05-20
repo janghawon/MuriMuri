@@ -8,13 +8,6 @@ public class HyeonsolAction : MonoBehaviour
 {
     public List<UnityEvent> ActionDataList = new List<UnityEvent>();
 
-    public void StartGame()
-    {
-        SentenceManager.Instance.SetPanel();
-        SentenceManager.Instance.NextSentence();
-        Cursor.visible = true;
-    }
-
     public void SampleMove()
     {
         GameObject sample = GameObject.Find("SamplePos");
