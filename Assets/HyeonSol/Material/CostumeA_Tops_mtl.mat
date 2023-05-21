@@ -2,20 +2,23 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: CostumeA_Tops_mtl
-  m_Shader: {fileID: 4800000, guid: 1a97144e4ad27a04aafd70f7b915cedb, type: 3}
-  m_ShaderKeywords: MTOON_OUTLINE_COLOR_MIXED MTOON_OUTLINE_WIDTH_SCREEN _MTOON_OUTLINE_SCREEN
+  m_Shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - MTOON_OUTLINE_COLOR_MIXED
+  - MTOON_OUTLINE_WIDTH_SCREEN
+  - _MTOON_OUTLINE_SCREEN
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap:
-    RenderType: Opaque
+  stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -96,6 +99,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SphereAdd:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -108,6 +115,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _AlphaMode: 0
     - _AlphaToMask: 0
@@ -172,3 +180,5 @@ Material:
     - _OutlineColor: {r: 0.5849056, g: 0.4311174, b: 0.40557137, a: 1}
     - _RimColor: {r: 1, g: 0.6745283, b: 0.6745283, a: 1}
     - _ShadeColor: {r: 1, g: 1, b: 1, a: 1}
+    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+  m_BuildTextureStacks: []
