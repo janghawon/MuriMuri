@@ -6,11 +6,14 @@ using UnityEngine.AI;
 
 public class CharacterManager : MonoBehaviour
 {
+    Animator _characterAnimator;
     NavMeshAgent _navMesh;
     public static CharacterManager Instance;
     CharacterBrain _characterBrain;
     public GameObject Hyeonsol;
     public GameObject SulA;
+
+    bool isWalk;
     private void Awake()
     {
         if(Instance != null)
@@ -21,6 +24,8 @@ public class CharacterManager : MonoBehaviour
         DontDestroyOnLoad(this);
         Hyeonsol = GameObject.Find("Hyeonsol");
         SulA = GameObject.Find("SulA");
+        _navMesh = Hyeonsol.GetComponent<NavMeshAgent>();
+        _characterAnimator = Hyeonsol.GetComponent<Animator>();
     }
 
     public void MoveSet(CharacterType type, Vector3 targetPos, float speed)
@@ -28,13 +33,40 @@ public class CharacterManager : MonoBehaviour
         if(type == CharacterType.Hyeonsol)
         {
             _navMesh = Hyeonsol.GetComponent<NavMeshAgent>();
+            _characterAnimator = Hyeonsol.GetComponent<Animator>();
         }
         else
         {
             _navMesh = SulA.GetComponent<NavMeshAgent>();
+            _characterAnimator = SulA.GetComponent<Animator>();
         }
+        
         _navMesh.speed = speed;
         _navMesh.SetDestination(targetPos);
+        StartCoroutine(WalkDelay());
+    }
+
+    IEnumerator WalkDelay()
+    {
+        yield return null;
+        isWalk = true;
+    }
+
+    private void Update()
+    {
+        if(isWalk)
+        {
+            if (_navMesh.velocity.sqrMagnitude != 0)
+            {
+                _characterAnimator.SetBool("isWalk", true);
+            }
+            else
+            {
+                _characterAnimator.SetBool("isWalk", false);
+                isWalk = false;
+                Debug.Log(isWalk);
+            }
+        }
     }
 
     public void SetEmotion(CharacterType type, EmotionType emotion)
