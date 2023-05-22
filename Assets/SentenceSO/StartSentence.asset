@@ -18,8 +18,42 @@ MonoBehaviour:
   - character: 1
     emotion: 1
   SentenceList:
-  - nameText: dd
-    sentencetext: dddddd
+  - nameText: "\uC774\uD604\uC194"
+    sentencetext: "\uC624\uB79C\uB9CC?"
+    useEmotion: 0
+    EmotionSetting:
+    - character: 0
+      emotion: 0
+    - character: 0
+      emotion: 0
+    PhaseEvent:
+      usePhaseEvent: 0
+      character: 0
+    CustomEvent:
+      useCustomEvent: 0
+      customEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    Event: {fileID: 0}
+  - nameText: "\uB098"
+    sentencetext: "\uB9E8\uB0A0 \uBCFC \uB54C \uB9C8\uB2E4 \uADF8\uB300\uC0AC \uD558\uB354\uB77C?
+      \uC800\uBC88\uC8FC\uC5D0\uB3C4 \uB9CC\uB0AC\uC796\uC544"
+    useEmotion: 0
+    EmotionSetting:
+    - character: 0
+      emotion: 0
+    PhaseEvent:
+      usePhaseEvent: 0
+      character: 0
+    CustomEvent:
+      useCustomEvent: 0
+      customEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    Event: {fileID: 0}
+  - nameText: "\uC774\uD604\uC194"
+    sentencetext: "\uC65C~ \uBB54\uAC00 \uBC29\uD559 \uB05D\uB098\uACE0 \uB9CC\uB098\uB294\uAC70
+      \uAC19\uC544\uC11C \uC0B0\uB73B\uD558\uC9C0 \uC54A\uC544?"
     useEmotion: 0
     EmotionSetting:
     - character: 0

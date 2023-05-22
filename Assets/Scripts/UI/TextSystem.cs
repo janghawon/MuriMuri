@@ -28,7 +28,14 @@ public class TextSystem : MonoBehaviour
 
     private void ClickEvent()
     {
-        SentenceManager.Instance.NextSentence();
+        if(SentenceManager.Instance.isTexting)
+        {
+            SentenceManager.Instance.LookFastText();
+        }
+        else
+        {
+            SentenceManager.Instance.NextSentence();
+        }
     }
 
     public void TextRendering(string name, string sentence)

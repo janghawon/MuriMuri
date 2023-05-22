@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class BackGround : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] Vector3 upPos;
+    [SerializeField] Vector3 downPos;
+    public float speed;
+    private void Update()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        this.transform.Translate(new Vector3(0, -0.1f * speed, 0), Space.World);
+        if(this.transform.position.y <= downPos.y)
+        {
+            this.transform.position += new Vector3(0, 60, 0);
+        }
     }
 }

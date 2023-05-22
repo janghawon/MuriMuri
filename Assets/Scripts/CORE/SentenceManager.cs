@@ -12,9 +12,11 @@ public class SentenceManager : MonoBehaviour
 
     int storyCount = 0;
     bool isOnPanel;
+    public bool isTexting;
 
     HyeonsolBrain hb;
     SulABrain sb;
+    Coroutine textCo;
     private void Awake()
     {
         if(Instance != null)
@@ -23,16 +25,28 @@ public class SentenceManager : MonoBehaviour
         }
         Instance = this;
         textSystem = GameObject.Find("UICANVAS").GetComponent<TextSystem>();
+        
         DontDestroyOnLoad(this);
     }
 
     private void TextRender()
     {
-        StartCoroutine(LookTexty());
+        textCo = StartCoroutine(LookTexty());
+    }
+
+    public void LookFastText()
+    {
+        StopCoroutine(textCo);
+        textSystem.TextRendering(currentSO.SentenceList[storyCount].nameText,
+                                 currentSO.SentenceList[storyCount].sentencetext);
+        
+        isTexting = false;
+        storyCount++;
     }
 
     IEnumerator LookTexty()
     {
+        isTexting = true;
         string txt = "";
         for(int i = 0; i < currentSO.SentenceList[storyCount].sentencetext.Length; i++)
         {
@@ -40,6 +54,7 @@ public class SentenceManager : MonoBehaviour
             textSystem.TextRendering(currentSO.SentenceList[storyCount].nameText, txt);
             yield return new WaitForSeconds(0.05f);
         }
+        isTexting = false;
         storyCount++;
     }
 
