@@ -8,7 +8,7 @@ public class TextSystem : MonoBehaviour
 {
     private UIDocument _uiDocument;
     VisualElement root;
-    VisualElement panel;
+    Button panel;
     Label nameTxt;
     Label sentenceTxt;
     private void Awake()
@@ -19,9 +19,16 @@ public class TextSystem : MonoBehaviour
     private void OnEnable()
     {
         root = _uiDocument.rootVisualElement;
-        panel = root.Q<VisualElement>("Panel");
+        panel = root.Q<Button>("Panel");
         nameTxt = root.Q<Label>("NameText");
         sentenceTxt = root.Q<Label>("sentenceText");
+
+        panel.clicked += ClickEvent;
+    }
+
+    private void ClickEvent()
+    {
+        SentenceManager.Instance.NextSentence();
     }
 
     public void TextRendering(string name, string sentence)

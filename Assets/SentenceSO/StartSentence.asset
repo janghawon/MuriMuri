@@ -25,7 +25,7 @@ MonoBehaviour:
     - character: 0
       emotion: 0
     PhaseEvent:
-      usePhaseEvent: 1
+      usePhaseEvent: 0
       character: 0
     CustomEvent:
       useCustomEvent: 0

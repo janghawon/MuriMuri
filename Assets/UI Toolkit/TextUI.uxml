@@ -1,9 +1,9 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Toolkit/TextSystem.uss?fileID=7433441132597879392&amp;guid=49114066d7ae7024799c6bc07e6df691&amp;type=3#TextSystem" />
     <ui:VisualElement name="Root" style="align-items: center; justify-content: flex-end;">
-        <ui:VisualElement name="Panel" class="PanelSet">
-            <ui:Label text="Name" display-tooltip-when-elided="true" name="NameText" style="height: 100px; margin-left: 50px; margin-top: 40px; font-size: 70px; color: rgb(255, 255, 255);" />
-            <ui:Label text="Sentence" display-tooltip-when-elided="true" name="sentenceText" style="height: 168px; margin-left: 60px; margin-top: 15px; font-size: 50px; color: rgb(255, 255, 255); margin-right: 50px;" />
-        </ui:VisualElement>
+        <ui:Button display-tooltip-when-elided="true" name="Panel" enable-rich-text="false" class="PanelSet">
+            <ui:Label text="Name" display-tooltip-when-elided="true" name="NameText" style="height: 100px; margin-left: 50px; margin-top: 40px; font-size: 70px; color: rgb(255, 255, 255); -unity-text-align: middle-left;" />
+            <ui:Label text="Sentence" display-tooltip-when-elided="true" name="sentenceText" style="height: 168px; margin-left: 60px; margin-top: 15px; font-size: 50px; color: rgb(255, 255, 255); margin-right: 50px; -unity-text-align: upper-left;" />
+        </ui:Button>
     </ui:VisualElement>
 </ui:UXML>

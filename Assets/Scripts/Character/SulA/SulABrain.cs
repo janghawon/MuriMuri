@@ -34,7 +34,7 @@ public class SulABrain : CharacterBrain
     {
         if (canChecking)
         {
-            Collider[] hit = Physics.OverlapBox(transform.position, (transform.lossyScale * 5) / 2, Quaternion.identity, _whatIsPlayer);
+            Collider[] hit = Physics.OverlapBox(transform.position, (transform.lossyScale * 3) / 2, Quaternion.identity, _whatIsPlayer);
 
             foreach (Collider hited in hit)
             {

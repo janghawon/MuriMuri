@@ -33,15 +33,25 @@ public class PlayerMove : MonoBehaviour
             _verticalVelocity = _gravtiy * 0.3f * Time.fixedDeltaTime;
         }
     }
+    public void StopImmediately()
+    {
+        _moveDir = Vector3.zero;
+    }
 
     public void SetMoveValue(Vector3 value)
     {
+        if (value.sqrMagnitude < 1)
+        {
+            StopImmediately();
+        }
         _moveDir = value;
     }
     private void CalculatorMove()
     {
         _moveDir.Normalize();
         _moveDir *= _playerSpeed * Time.fixedDeltaTime;
+
+        
        
         if (canMove)
         {

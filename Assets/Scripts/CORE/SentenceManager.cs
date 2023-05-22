@@ -26,11 +26,26 @@ public class SentenceManager : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
+    private void TextRender()
+    {
+        StartCoroutine(LookTexty());
+    }
+
+    IEnumerator LookTexty()
+    {
+        string txt = "";
+        for(int i = 0; i < currentSO.SentenceList[storyCount].sentencetext.Length; i++)
+        {
+            txt += currentSO.SentenceList[storyCount].sentencetext[i];
+            textSystem.TextRendering(currentSO.SentenceList[storyCount].nameText, txt);
+            yield return new WaitForSeconds(0.05f);
+        }
+        storyCount++;
+    }
+
     public void NextSentence()
     {
-        textSystem.TextRendering(currentSO.SentenceList[storyCount].nameText, 
-                                 currentSO.SentenceList[storyCount].sentencetext);
-
+        TextRender();
         #region 감정 사용
         if (currentSO.SentenceList[storyCount].useEmotion)
         {
@@ -57,7 +72,6 @@ public class SentenceManager : MonoBehaviour
         {
             if(currentSO.SentenceList[storyCount].PhaseEvent.character == CharacterType.Hyeonsol)
             {
-                Debug.Log(1);
                 hb.SetAction();
             }
             else if (currentSO.SentenceList[storyCount].PhaseEvent.character == CharacterType.SulA)
@@ -70,10 +84,6 @@ public class SentenceManager : MonoBehaviour
         if (currentSO.SentenceList.Count == storyCount)
         {
             SentenceRender();
-        }
-        else
-        {
-            storyCount++;
         }
         #endregion
     }
