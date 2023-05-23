@@ -67,3 +67,34 @@ MonoBehaviour:
         m_PersistentCalls:
           m_Calls: []
     Event: {fileID: 0}
+  - nameText: "\uB098"
+    sentencetext: "\uCC98\uC74C\uC5D0\uB9CC \uC0B0\uB73B\uD558\uC9C0 \uAC08\uC218\uB85D
+      \uC774\uC0C1\uD55C \uB290\uB08C\uC774\uC57C.."
+    useEmotion: 0
+    EmotionSetting:
+    - character: 0
+      emotion: 0
+    PhaseEvent:
+      usePhaseEvent: 0
+      character: 0
+    CustomEvent:
+      useCustomEvent: 0
+      customEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    Event: {fileID: 0}
+  - nameText: "\uC774\uD604\uC194"
+    sentencetext: "\uD5E4\uC5D0? \uC815\uD655\uD788 \uBB34\uC2A8\uB290\uB08C\uC778\uB370?"
+    useEmotion: 1
+    EmotionSetting:
+    - character: 0
+      emotion: 1
+    PhaseEvent:
+      usePhaseEvent: 0
+      character: 0
+    CustomEvent:
+      useCustomEvent: 0
+      customEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    Event: {fileID: 0}

@@ -72,7 +72,14 @@ public class CharacterManager : MonoBehaviour
     public void SetEmotion(CharacterType type, EmotionType emotion)
     {
         SelecTyper(type);
-        _characterBrain.SetEmotion((float)emotion * 0.2f);
+        if(emotion == EmotionType.backhand)
+        {
+            _characterBrain.SetEmotion(0);
+        }
+        else
+        {
+            _characterBrain.SetEmotion((float)emotion * 0.2f);
+        }
     }
 
     public void ExitEmotion(CharacterType type)
