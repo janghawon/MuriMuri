@@ -51,8 +51,6 @@ public class PlayerMove : MonoBehaviour
         _moveDir.Normalize();
         _moveDir *= _playerSpeed * Time.fixedDeltaTime;
 
-        
-       
         if (canMove)
         {
             Vector3 moveDirection = Quaternion.Euler(0, GameManager.Instance.mainCam.transform.eulerAngles.y, 0) * _moveDir;

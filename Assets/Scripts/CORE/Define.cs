@@ -4,6 +4,13 @@ using UnityEngine;
 
 namespace CharacterCore
 {
+    public enum AnimationType
+    {
+        Idle,
+        Walk,
+        Swing
+    }
+
     public enum CharacterType
     {
         Hyeonsol = 0,

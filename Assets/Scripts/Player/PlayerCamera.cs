@@ -4,20 +4,25 @@ using UnityEngine;
 
 public class PlayerCamera : MonoBehaviour
 {
+    [SerializeField] private GameObject _Player;
     [SerializeField] private float _mouseSpeed = 10;
     private float _mouseXInput;
     private float _mouseYInput;
 
     public bool canMoveCam = true;
+
     public void SetMouse(float _mouseX, float _mouseY)
     {
         _mouseXInput = _mouseX * _mouseSpeed;
         _mouseYInput = _mouseY * _mouseSpeed;
     }
+
     public void PlayerMouseCal()
     {
         if(canMoveCam)
+        {
             GameManager.Instance.mainCam.gameObject.transform.rotation = Quaternion.Euler(-_mouseYInput, _mouseXInput, 0);
+        }
     }
 
     private void Update()
