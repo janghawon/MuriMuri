@@ -15,8 +15,6 @@ MonoBehaviour:
   STARTEMOTION:
   - character: 0
     emotion: 4
-  - character: 1
-    emotion: 1
   SentenceList:
   - nameText: "\uC774\uD604\uC194"
     sentencetext: "\uC624\uB79C\uB9CC?"
@@ -114,11 +112,11 @@ MonoBehaviour:
           m_Calls: []
     Event: {fileID: 0}
   - nameText: "\uC774\uD604\uC194"
-    sentencetext: "\uC5B4\uBA38 \uC9C4\uC9DC \uC774\uC0C1\uD55C \uB290\uB08C\uC778\uAC00\uBCF4\uB124?"
+    sentencetext: "\uD6C4\uD6C4.. \uC9C4\uC9DC \uC774\uC0C1\uD55C \uB290\uB08C\uC778\uAC00\uBCF4\uB124?"
     useEmotion: 1
     EmotionSetting:
     - character: 0
-      emotion: 3
+      emotion: 1
     PhaseEvent:
       usePhaseEvent: 0
       character: 0
@@ -133,7 +131,7 @@ MonoBehaviour:
     useEmotion: 1
     EmotionSetting:
     - character: 0
-      emotion: 3
+      emotion: 1
     PhaseEvent:
       usePhaseEvent: 0
       character: 0
@@ -148,7 +146,7 @@ MonoBehaviour:
     useEmotion: 0
     EmotionSetting:
     - character: 0
-      emotion: 3
+      emotion: 2
     PhaseEvent:
       usePhaseEvent: 0
       character: 0
