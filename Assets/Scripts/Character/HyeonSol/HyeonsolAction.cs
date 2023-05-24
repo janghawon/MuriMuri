@@ -25,7 +25,7 @@ public class HyeonsolAction : MonoBehaviour
     public void RunSchool()
     {
         CharacterManager.Instance.MoveSet(CharacterType.Hyeonsol, GameObject.Find("RunningPos").transform.position, 6);
-        cam.canMoveCam = true;
+        cam.canhor = true;
         Cursor.visible = false;
         StartCoroutine(RunSchoolCo());
     }
@@ -34,5 +34,6 @@ public class HyeonsolAction : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         SentenceManager.Instance.SetPanel();
+        cam.canver = true;
     }
 }

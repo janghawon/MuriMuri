@@ -14,6 +14,8 @@ public class CharacterManager : MonoBehaviour
     public GameObject SulA;
 
     bool isWalk;
+
+    EmotionType currentEmoType;
     private void Awake()
     {
         if(Instance != null)
@@ -64,7 +66,6 @@ public class CharacterManager : MonoBehaviour
             {
                 _characterAnimator.SetBool("isWalk", false);
                 isWalk = false;
-                Debug.Log(isWalk);
             }
         }
     }
@@ -78,8 +79,28 @@ public class CharacterManager : MonoBehaviour
         }
         else
         {
-            _characterBrain.SetEmotion((float)emotion * 0.2f);
+            if(emotion == currentEmoType)
+            {
+                return;
+            }
+            StartCoroutine(EmoCo(emotion));
         }
+    }
+
+    IEnumerator EmoCo(EmotionType emotion)
+    {
+        currentEmoType = emotion;
+        float b = (float)emotion * 0.2f;
+        float a = b - 0.1f;
+
+        while(a < b)
+        {
+            a += 0.1f * Time.deltaTime * 5;
+            a = Mathf.Clamp(a, a, b);
+            _characterBrain.SetEmotion(a);
+            yield return null;
+        }
+        
     }
 
     public void ExitEmotion(CharacterType type)

@@ -43,7 +43,8 @@ public class HyeonsolBrain : CharacterBrain
                 PlayerCamera camera = hited.GetComponent<PlayerCamera>();
 
                 playerMove.canMove = false;
-                camera.canMoveCam = false;
+                camera.canhor = false;
+                camera.canver = false;
 
                 GameManager.Instance.SetConversationBefore(this.gameObject);
                 LookPlayer(GameManager.Instance.mainCam);
