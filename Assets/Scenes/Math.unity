@@ -1095,6 +1095,7 @@ MonoBehaviour:
   _range: 1
   _wiggleSpeed: 1
   _moveSpeed: 0.2
+  _blinkSpeed: 0.3
 --- !u!4 &1234052780
 Transform:
   m_ObjectHideFlags: 0

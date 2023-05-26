@@ -8,25 +8,34 @@ public class SnakeManager : MonoBehaviour
     private List<Transform> snakes = new List<Transform>();
     [SerializeField] private List<Material> snakeMats = new List<Material>();
 
+    [Header("배배배뱀")]
     [SerializeField] private float _width;
     [SerializeField] private float _range;
     [SerializeField] private float _wiggleSpeed;
     [SerializeField] private float _moveSpeed;
     public float Movespeed => _moveSpeed;
+
+    [Header("투투투명")]
+    [SerializeField] private float _blinkSpeed;
+
     float[] timers;
+    float[] alphas;
 
     private void Awake()
     {
         MeshRenderer mat;
         _snake = GameObject.Find("Snake").transform;
         timers = new float[_snake.Find("Visual").childCount];
+        alphas = new float[_snake.Find("Visual").childCount];
 
         for(int i = 0; i < _snake.Find("Visual").childCount; i++)
         {
             snakes.Add(_snake.Find("Visual").GetChild(i));
             mat = _snake.Find("Visual").GetChild(i).GetComponent<MeshRenderer>();
+            Debug.Log(_snake.Find("Visual").GetChild(i));
             snakeMats.Add(mat.material);
             timers[i] = 0f;
+            alphas[i] = 0f;
         }
     }
 
@@ -45,12 +54,13 @@ public class SnakeManager : MonoBehaviour
         }
     }
 
-    IEnumerator CCCColor(Material matm, int idx)
+    IEnumerator CCCColor(Material mat, int idx)
     {
-        float a;
         while(true)
         {
-            //mat.color = new Color(1, 1, 1, )
+            mat.color = new Color(0, 1, 1, Mathf.Sin(alphas[idx] * _blinkSpeed));
+            alphas[idx] += Time.fixedDeltaTime;
+            yield return null;
         }
     }
 
@@ -60,7 +70,6 @@ public class SnakeManager : MonoBehaviour
         {
             obj.transform.position = new Vector3(Mathf.Sin(timers[idx] * _wiggleSpeed) * _width, obj.transform.position.y);
             timers[idx] += Time.fixedDeltaTime;
-            _snake.transform.Translate(new Vector3(0, _moveSpeed * 0.001f, 0));
             yield return null;
         }
     }

@@ -56,7 +56,7 @@ public class CharacterManager : MonoBehaviour
 
     private void Update()
     {
-        if(isWalk)
+        if (isWalk)
         {
             if (_navMesh.velocity.sqrMagnitude != 0)
             {
