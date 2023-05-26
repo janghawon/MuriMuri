@@ -58,7 +58,8 @@ public class SnakeManager : MonoBehaviour
     {
         while(true)
         {
-            mat.color = new Color(0, 1, 1, Mathf.Sin(alphas[idx] * _blinkSpeed));
+            mat.color = new Color(1, 1, 1, Mathf.Clamp(Mathf.Sin(alphas[idx]), 0, 1));
+            Debug.Log(mat.color);
             alphas[idx] += Time.fixedDeltaTime;
             yield return null;
         }
