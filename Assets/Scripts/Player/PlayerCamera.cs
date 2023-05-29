@@ -21,7 +21,10 @@ public class PlayerCamera : MonoBehaviour
 
     public void PlayerMouseCal()
     {
-        GameManager.Instance.mainCam.gameObject.transform.rotation = Quaternion.Euler(-_mouseYInput, _mouseXInput, 0);
+        if(canhor || canver)
+        {
+            GameManager.Instance.mainCam.gameObject.transform.rotation = Quaternion.Euler(-_mouseYInput, _mouseXInput, 0);
+        }
     }
 
     private void Update()

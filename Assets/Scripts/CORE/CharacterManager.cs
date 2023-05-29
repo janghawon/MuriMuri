@@ -45,12 +45,6 @@ public class CharacterManager : MonoBehaviour
         
         _navMesh.speed = speed;
         _navMesh.SetDestination(targetPos);
-        StartCoroutine(WalkDelay());
-    }
-
-    IEnumerator WalkDelay()
-    {
-        yield return null;
         isWalk = true;
     }
 
@@ -58,7 +52,8 @@ public class CharacterManager : MonoBehaviour
     {
         if (isWalk)
         {
-            if (_navMesh.velocity.sqrMagnitude != 0)
+            Debug.Log(_navMesh);
+            if (!_navMesh.isStopped)
             {
                 _characterAnimator.SetBool("isWalk", true);
             }

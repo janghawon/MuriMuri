@@ -35,5 +35,6 @@ public class HyeonsolAction : MonoBehaviour
         yield return new WaitForSeconds(4f);
         SentenceManager.Instance.SetPanel();
         cam.canver = true;
+        move.canMove = true;
     }
 }

@@ -10,7 +10,6 @@ public abstract class CharacterBrain : MonoBehaviour
     
     [SerializeField] protected LayerMask _whatIsPlayer;
     
-
     protected void LookPlayer(GameObject player)
     {
         Vector3 playerdir = player.transform.position - transform.position;
