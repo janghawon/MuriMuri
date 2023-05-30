@@ -52,7 +52,6 @@ public class CharacterManager : MonoBehaviour
     {
         if (isWalk)
         {
-            Debug.Log(_navMesh);
             if (!_navMesh.isStopped)
             {
                 _characterAnimator.SetBool("isWalk", true);
