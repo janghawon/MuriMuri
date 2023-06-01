@@ -207,6 +207,8 @@ GameObject:
   m_Component:
   - component: {fileID: 192204563}
   - component: {fileID: 192204564}
+  - component: {fileID: 192204565}
+  - component: {fileID: 192204566}
   m_Layer: 0
   m_Name: SentenceManager
   m_TagString: Untagged
@@ -244,6 +246,32 @@ MonoBehaviour:
   SentenceList:
   - {fileID: 11400000, guid: 79dbd9b4c43845e4f87ed91c5d2146c6, type: 2}
   isTexting: 0
+--- !u!114 &192204565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192204562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: becac68b9d275b14dbf5bbadd8bcd3a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogs:
+  - {fileID: 4900000, guid: f8bb8e7f35d94d94796904ae8995da6c, type: 3}
+--- !u!114 &192204566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192204562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 976808ac92aa6cf4dba3b65760a8445c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &220319339
 GameObject:
   m_ObjectHideFlags: 0
@@ -19749,6 +19777,14 @@ PrefabInstance:
     - target: {fileID: 8364052504939052209, guid: cbf202928b26d04448050d35e193b228, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.179
+      objectReference: {fileID: 0}
+    - target: {fileID: 8364052505312659024, guid: cbf202928b26d04448050d35e193b228, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8364052505312659024, guid: cbf202928b26d04448050d35e193b228, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.225
       objectReference: {fileID: 0}
     - target: {fileID: 8364052505501183108, guid: cbf202928b26d04448050d35e193b228, type: 3}
       propertyPath: m_LocalPosition.z

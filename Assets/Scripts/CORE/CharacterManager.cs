@@ -14,6 +14,7 @@ public class CharacterManager : MonoBehaviour
     public GameObject SulA;
 
     bool isWalk;
+    bool isSit;
 
     EmotionType currentEmoType;
     private void Awake()
@@ -48,6 +49,19 @@ public class CharacterManager : MonoBehaviour
         isWalk = true;
     }
 
+    public void SitSet(CharacterType type, bool check)
+    {
+        if (type == CharacterType.Hyeonsol)
+        {
+            _characterAnimator = Hyeonsol.GetComponent<Animator>();
+        }
+        else
+        {
+            _characterAnimator = SulA.GetComponent<Animator>();
+        }
+        isSit = check;
+    }
+
     private void Update()
     {
         if (isWalk)
@@ -61,6 +75,15 @@ public class CharacterManager : MonoBehaviour
                 _characterAnimator.SetBool("isWalk", false);
                 isWalk = false;
             }
+        }
+
+        if(isSit)
+        {
+            _characterAnimator.SetBool("isSit", true);
+        }
+        else
+        {
+            _characterAnimator.SetBool("isSit", false);
         }
     }
 

@@ -16,12 +16,6 @@ public class HyeonsolAction : MonoBehaviour
         cam = GameObject.Find("Player").GetComponent<PlayerCamera>();
     }
 
-    public void SampleMove()
-    {
-        GameObject sample = GameObject.Find("SamplePos");
-        CharacterManager.Instance.MoveSet(CharacterType.Hyeonsol, sample.transform.position, 1);
-    }
-
     public void RunSchool()
     {
         CharacterManager.Instance.MoveSet(CharacterType.Hyeonsol, GameObject.Find("RunningPos").transform.position, 6);
@@ -33,7 +27,10 @@ public class HyeonsolAction : MonoBehaviour
     IEnumerator RunSchoolCo()
     {
         yield return new WaitForSeconds(4f);
+        
         SentenceManager.Instance.SetPanel();
+        transform.position = new Vector3(8.16f, 3, -9.7f);
+        CharacterManager.Instance.SitSet(CharacterType.Hyeonsol, true);
         cam.canver = true;
         move.canMove = true;
     }

@@ -8,7 +8,8 @@ namespace CharacterCore
     {
         Idle,
         Walk,
-        Swing
+        Swing,
+        Sit
     }
 
     public enum CharacterType
