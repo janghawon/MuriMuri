@@ -27,7 +27,6 @@ namespace CharacterCore
         angry = 4,
         vpos = 5,
         shaking = 6,
-        generic = 7
     }
 }
 

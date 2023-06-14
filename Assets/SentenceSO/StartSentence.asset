@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   STARTEMOTION:
   - character: 0
-    emotion: 4
+    emotion: 3
   SentenceList:
   - nameText: "\uC774\uD604\uC194"
     sentencetext: "\uC57C! \uC57C! \uC5B4\uC81C \uBD24\uC5B4?"
@@ -81,7 +81,7 @@ MonoBehaviour:
     useEmotion: 1
     EmotionSetting:
     - character: 0
-      emotion: 5
+      emotion: 1
     PhaseEvent:
       usePhaseEvent: 0
       character: 0
@@ -209,7 +209,7 @@ MonoBehaviour:
     useEmotion: 1
     EmotionSetting:
     - character: 0
-      emotion: 1
+      emotion: 0
     PhaseEvent:
       usePhaseEvent: 0
       character: 0
@@ -225,7 +225,7 @@ MonoBehaviour:
     useEmotion: 1
     EmotionSetting:
     - character: 0
-      emotion: 1
+      emotion: 0
     PhaseEvent:
       usePhaseEvent: 0
       character: 0
@@ -253,8 +253,7 @@ MonoBehaviour:
           m_Calls: []
     Event: {fileID: 0}
   - nameText: "\uB098"
-    sentencetext: "\uAC15\uC124\uC544\uB97C \uCC2C\uC591\uD558\uB294 \uB9D0\uC774\uC57C?
-      \uC544\uB2C8\uBA74 \uB098\uB97C \uAE4C\uB0B4\uB9AC\uB294 \uB9D0?"
+    sentencetext: "\uADF8\uB0E5 \uB300\uB193\uACE0 \uB098\uB97C \uAE4C\uB0B4\uB9AC\uB294\uAD6C\uB098"
     useEmotion: 0
     EmotionSetting:
     - character: 0
@@ -269,11 +268,26 @@ MonoBehaviour:
           m_Calls: []
     Event: {fileID: 0}
   - nameText: "\uC774\uD604\uC194"
-    sentencetext: "\uB458 \uB2E4\uAC70\uB4E0~ \uBA54\uB871~"
+    sentencetext: "\uD788\uD788 \uBA54\uB871~"
     useEmotion: 1
     EmotionSetting:
     - character: 0
-      emotion: 6
+      emotion: 5
+    PhaseEvent:
+      usePhaseEvent: 0
+      character: 0
+    CustomEvent:
+      useCustomEvent: 0
+      customEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    Event: {fileID: 0}
+  - nameText: "\uB098"
+    sentencetext: ......
+    useEmotion: 1
+    EmotionSetting:
+    - character: 0
+      emotion: 5
     PhaseEvent:
       usePhaseEvent: 0
       character: 0
@@ -284,13 +298,14 @@ MonoBehaviour:
           m_Calls: []
     Event: {fileID: 0}
   - nameText: "\uC774\uD604\uC194"
-    sentencetext: "\uB458 \uB2E4\uAC70\uB4E0~ \uBA54\uB871~"
+    sentencetext: "\uADF8\uB7FC \uB098\uB294 \uB2F9\uBC88\uC774\uB77C \uBA3C\uC800
+      \uAC04\uB2E4~ "
     useEmotion: 0
     EmotionSetting:
     - character: 0
-      emotion: 6
+      emotion: 5
     PhaseEvent:
-      usePhaseEvent: 0
+      usePhaseEvent: 1
       character: 0
     CustomEvent:
       useCustomEvent: 0

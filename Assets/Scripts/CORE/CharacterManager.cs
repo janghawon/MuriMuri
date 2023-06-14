@@ -13,7 +13,7 @@ public class CharacterManager : MonoBehaviour
     public GameObject Hyeonsol;
     public GameObject SulA;
 
-    bool isWalk;
+    public bool isWalk;
     bool isSit;
 
     EmotionType currentEmoType;
@@ -33,7 +33,29 @@ public class CharacterManager : MonoBehaviour
 
     public void MoveSet(CharacterType type, Vector3 targetPos, float speed)
     {
+        GameObject selectChar;
         if(type == CharacterType.Hyeonsol)
+        {
+            _navMesh = Hyeonsol.GetComponent<NavMeshAgent>();
+            _characterAnimator = Hyeonsol.GetComponent<Animator>();
+            selectChar = Hyeonsol;
+        }
+        else
+        {
+            _navMesh = SulA.GetComponent<NavMeshAgent>();
+            _characterAnimator = SulA.GetComponent<Animator>();
+            selectChar = SulA;
+        }
+        
+        _navMesh.speed = speed;
+        Debug.Log(selectChar.transform.position.y);
+        _navMesh.SetDestination(new Vector3(targetPos.x, selectChar.transform.position.y, targetPos.z));
+        isWalk = true;
+    }
+
+    public void MoveCancle(CharacterType type)
+    {
+        if (type == CharacterType.Hyeonsol)
         {
             _navMesh = Hyeonsol.GetComponent<NavMeshAgent>();
             _characterAnimator = Hyeonsol.GetComponent<Animator>();
@@ -43,10 +65,8 @@ public class CharacterManager : MonoBehaviour
             _navMesh = SulA.GetComponent<NavMeshAgent>();
             _characterAnimator = SulA.GetComponent<Animator>();
         }
-        
-        _navMesh.speed = speed;
-        _navMesh.SetDestination(targetPos);
-        isWalk = true;
+
+        _navMesh.isStopped = true;
     }
 
     public void SitSet(CharacterType type, bool check)
@@ -66,7 +86,7 @@ public class CharacterManager : MonoBehaviour
     {
         if (isWalk)
         {
-            if (_navMesh.velocity.sqrMagnitude != 0)
+            if (!_navMesh.isStopped)
             {
                 _characterAnimator.SetBool("isWalk", true);
             }
@@ -113,8 +133,7 @@ public class CharacterManager : MonoBehaviour
     IEnumerator EmoCo(EmotionType emotion)
     {
         currentEmoType = emotion;
-        Debug.Log((int)emotion);
-        float b = (float)emotion * 0.125f;
+        float b = (float)emotion * 0.14285f;
         float a = b - 0.1f;
 
         while(a < b)

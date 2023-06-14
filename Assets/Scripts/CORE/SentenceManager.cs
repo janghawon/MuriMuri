@@ -107,7 +107,9 @@ public class SentenceManager : MonoBehaviour
     public void SetPanel()
     {
         textSystem.SetPanel(isOnPanel);
+        Cursor.visible = !isOnPanel;
         isOnPanel = !isOnPanel;
+
     }
 
     public void SentenceRender()

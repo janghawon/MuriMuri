@@ -10,6 +10,7 @@ public class HyeonsolAction : MonoBehaviour
     PlayerMove move;
     PlayerCamera cam;
 
+    Vector3 targetTrans;
     private void Awake()
     {
         move = GameObject.Find("Player").GetComponent<PlayerMove>();
@@ -18,9 +19,9 @@ public class HyeonsolAction : MonoBehaviour
 
     public void RunSchool()
     {
-        CharacterManager.Instance.MoveSet(CharacterType.Hyeonsol, GameObject.Find("RunningPos").transform.position, 6);
+        targetTrans = GameObject.Find("RunningPos").transform.position;
+        CharacterManager.Instance.MoveSet(CharacterType.Hyeonsol, targetTrans, 6);
         cam.canhor = true;
-        Cursor.visible = false;
         StartCoroutine(RunSchoolCo());
     }
 
@@ -28,10 +29,18 @@ public class HyeonsolAction : MonoBehaviour
     {
         yield return new WaitForSeconds(4f);
 
-        SentenceManager.Instance.SetPanel();
-        transform.position = new Vector3(8.16f, 3, -9.7f);
-        CharacterManager.Instance.SitSet(CharacterType.Hyeonsol, true);
-        cam.canver = true;
-        move.canMove = true;
+        while (Vector3.Distance(targetTrans, transform.position) > 1)
+        {
+            yield return null;
+            continue;
+        }
+        Debug.Log(1);
+        CharacterManager.Instance.MoveSet(CharacterType.Hyeonsol, transform.position, 0);
+        //CharacterManager.Instance.MoveSet(CharacterType.Hyeonsol, transform.position, 0);
+        //SentenceManager.Instance.SetPanel();
+        //transform.position = new Vector3(8.16f, 3, -9.7f);
+        //CharacterManager.Instance.SitSet(CharacterType.Hyeonsol, true);
+        //cam.canver = true;
+        //move.canMove = true;
     }
 }
