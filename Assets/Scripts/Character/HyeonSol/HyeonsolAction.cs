@@ -27,7 +27,7 @@ public class HyeonsolAction : MonoBehaviour
     IEnumerator RunSchoolCo()
     {
         yield return new WaitForSeconds(4f);
-        
+
         SentenceManager.Instance.SetPanel();
         transform.position = new Vector3(8.16f, 3, -9.7f);
         CharacterManager.Instance.SitSet(CharacterType.Hyeonsol, true);

@@ -9,7 +9,6 @@ public class SentenceManager : MonoBehaviour
     TextSystem textSystem;
     [SerializeField] private List<SentenceSO> SentenceList = new List<SentenceSO>();
     SentenceSO currentSO;
-    TextReader _textReader;
 
     int chapterCount = 0;
     int storyCount = 0;
@@ -27,7 +26,6 @@ public class SentenceManager : MonoBehaviour
         }
         Instance = this;
         textSystem = GameObject.Find("UICANVAS").GetComponent<TextSystem>();
-        _textReader = GetComponent<TextReader>();
         
         DontDestroyOnLoad(this);
     }
@@ -41,11 +39,10 @@ public class SentenceManager : MonoBehaviour
     {
         isTexting = true;
         string txt = "";
-        for(int i = 0; i < _textReader.data_DialogList[chapterCount][storyCount]["sentence"].ToString().Length; i++)
+        for(int i = 0; i < currentSO.SentenceList[storyCount].sentencetext.Length; i++)
         {
-            //txt += currentSO.SentenceList[storyCount].sentencetext[i];
-            txt += _textReader.data_DialogList[chapterCount][storyCount]["sentence"].ToString()[i];
-            textSystem.TextRendering(_textReader.data_DialogList[chapterCount][storyCount]["name"].ToString(), txt);
+            txt += currentSO.SentenceList[storyCount].sentencetext[i];
+            textSystem.TextRendering(currentSO.SentenceList[storyCount].nameText, txt);
             yield return new WaitForSeconds(0.05f);
         }
         isTexting = false;
@@ -55,8 +52,8 @@ public class SentenceManager : MonoBehaviour
     public void LookFastText()
     {
         StopCoroutine(textCo);
-        textSystem.TextRendering(_textReader.data_DialogList[chapterCount][storyCount]["name"].ToString(),
-                                 _textReader.data_DialogList[chapterCount][storyCount]["sentence"].ToString());
+        textSystem.TextRendering(currentSO.SentenceList[storyCount].nameText,
+                                 currentSO.SentenceList[storyCount].sentencetext);
 
         isTexting = false;
         storyCount++;

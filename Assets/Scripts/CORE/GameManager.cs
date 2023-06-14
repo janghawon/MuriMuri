@@ -28,7 +28,6 @@ public class GameManager : MonoBehaviour
     {
         Vector3 dir = angleObj.transform.position - mainCam.transform.position;
         dir += new Vector3(0, 1, 0);
-        Debug.Log(dir);
         mainCam.transform.rotation = Quaternion.LookRotation(dir);
     }
 }

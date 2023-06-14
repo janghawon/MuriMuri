@@ -20,11 +20,14 @@ namespace CharacterCore
 
     public enum EmotionType
     {
-        backhand = 1,
-        embarass = 2,
-        surprise = 3,
-        armhang = 4,
-        angry = 5
+        backhand = 0,
+        embarass = 1,
+        surprise = 2,
+        armhang = 3,
+        angry = 4,
+        vpos = 5,
+        shaking = 6,
+        generic = 7
     }
 }
 

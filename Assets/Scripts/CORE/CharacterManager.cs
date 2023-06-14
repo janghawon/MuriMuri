@@ -66,7 +66,7 @@ public class CharacterManager : MonoBehaviour
     {
         if (isWalk)
         {
-            if (!_navMesh.isStopped)
+            if (_navMesh.velocity.sqrMagnitude != 0)
             {
                 _characterAnimator.SetBool("isWalk", true);
             }
@@ -92,7 +92,7 @@ public class CharacterManager : MonoBehaviour
         SelecTyper(type);
         if(emotion == EmotionType.backhand)
         {
-            _characterBrain.SetEmotion(0);
+            //StartCoroutine(BackhandCo());
         }
         else
         {
@@ -104,10 +104,17 @@ public class CharacterManager : MonoBehaviour
         }
     }
 
+    //IEnumerator BackhandCo()
+    //{
+
+    //    _characterBrain.SetEmotion(0);
+    //}
+
     IEnumerator EmoCo(EmotionType emotion)
     {
         currentEmoType = emotion;
-        float b = (float)emotion * 0.2f;
+        Debug.Log((int)emotion);
+        float b = (float)emotion * 0.125f;
         float a = b - 0.1f;
 
         while(a < b)
@@ -117,7 +124,6 @@ public class CharacterManager : MonoBehaviour
             _characterBrain.SetEmotion(a);
             yield return null;
         }
-        
     }
 
     public void ExitEmotion(CharacterType type)
