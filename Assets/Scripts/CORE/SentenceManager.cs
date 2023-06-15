@@ -5,6 +5,7 @@ using CharacterCore;
 
 public class SentenceManager : MonoBehaviour
 {
+    CustomEventManager _cem;
     public static SentenceManager Instance;
     TextSystem textSystem;
     [SerializeField] private List<SentenceSO> SentenceList = new List<SentenceSO>();
@@ -12,6 +13,7 @@ public class SentenceManager : MonoBehaviour
 
     int chapterCount = 0;
     int storyCount = 0;
+    int customCount = 0;
     bool isOnPanel;
     public bool isTexting;
 
@@ -26,7 +28,7 @@ public class SentenceManager : MonoBehaviour
         }
         Instance = this;
         textSystem = GameObject.Find("UICANVAS").GetComponent<TextSystem>();
-        
+        _cem = GameObject.Find("CustomEvent").GetComponent<CustomEventManager>();
         DontDestroyOnLoad(this);
     }
 
@@ -80,9 +82,10 @@ public class SentenceManager : MonoBehaviour
         }
         #endregion
         #region ¿Ã∫•∆Æ
-        if (currentSO.SentenceList[storyCount].CustomEvent.useCustomEvent)
+        if (currentSO.SentenceList[storyCount].useCustomEvent)
         {
-            currentSO.SentenceList[storyCount].CustomEvent.customEvent?.Invoke();
+            _cem.ActionList[customCount]?.Invoke();
+            customCount++;
         }
         if (currentSO.SentenceList[storyCount].PhaseEvent.usePhaseEvent)
         {

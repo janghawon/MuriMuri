@@ -25,24 +25,16 @@ MonoBehaviour:
     PhaseEvent:
       usePhaseEvent: 0
       character: 0
-    CustomEvent:
-      useCustomEvent: 0
-      customEvent:
-        m_PersistentCalls:
-          m_Calls: []
+    useCustomEvent: 0
     Event: {fileID: 0}
   - nameText: "\uB098"
-    sentencetext: "\uB9CC\uB098\uC790\uB9C8\uC790? \uBB54\uB370?"
+    sentencetext: "\uBB54\uB370 \uB610 \uD638\uB4E4\uAC11\uC774\uC57C?"
     useEmotion: 0
     EmotionSetting: []
     PhaseEvent:
       usePhaseEvent: 0
       character: 0
-    CustomEvent:
-      useCustomEvent: 0
-      customEvent:
-        m_PersistentCalls:
-          m_Calls: []
+    useCustomEvent: 0
     Event: {fileID: 0}
   - nameText: "\uC774\uD604\uC194"
     sentencetext: "\uC5B4\uC81C \uCEE4\uBBA4\uB2C8\uD2F0\uC5D0\uC11C \uBD24\uB294\uB370
@@ -55,11 +47,7 @@ MonoBehaviour:
     PhaseEvent:
       usePhaseEvent: 0
       character: 0
-    CustomEvent:
-      useCustomEvent: 0
-      customEvent:
-        m_PersistentCalls:
-          m_Calls: []
+    useCustomEvent: 0
     Event: {fileID: 0}
   - nameText: "\uB098"
     sentencetext: "\uB09C \uCEE4\uBBA4\uB2C8\uD2F0 \uC548\uD55C\uB2E4\uACE0.. \uB108\uB3C4
@@ -69,11 +57,7 @@ MonoBehaviour:
     PhaseEvent:
       usePhaseEvent: 0
       character: 0
-    CustomEvent:
-      useCustomEvent: 0
-      customEvent:
-        m_PersistentCalls:
-          m_Calls: []
+    useCustomEvent: 0
     Event: {fileID: 0}
   - nameText: "\uC774\uD604\uC194"
     sentencetext: "\uCEE4.. \uCEE4\uBBA4\uAC00 \uC5B4\uB54C\uC11C! \uAF64 \uC720\uC6A9\uD558\uACE0
@@ -85,11 +69,7 @@ MonoBehaviour:
     PhaseEvent:
       usePhaseEvent: 0
       character: 0
-    CustomEvent:
-      useCustomEvent: 0
-      customEvent:
-        m_PersistentCalls:
-          m_Calls: []
+    useCustomEvent: 0
     Event: {fileID: 0}
   - nameText: "\uB098"
     sentencetext: "\uC720\uC6A9\uD558\uAE34.. \uC5B4\uC9DC\uD53C \uAC70\uAE30\uC11C
@@ -101,11 +81,7 @@ MonoBehaviour:
     PhaseEvent:
       usePhaseEvent: 0
       character: 0
-    CustomEvent:
-      useCustomEvent: 0
-      customEvent:
-        m_PersistentCalls:
-          m_Calls: []
+    useCustomEvent: 0
     Event: {fileID: 0}
   - nameText: "\uC774\uD604\uC194"
     sentencetext: "\uBB50? \uC544\uB2C8\uC57C! \uC800\uBC88\uC5D0 \uB0B4\uAC00 \uC0AC\uC8FC\uD314\uC790\uAC24\uC5D0\uC11C
@@ -117,15 +93,11 @@ MonoBehaviour:
     PhaseEvent:
       usePhaseEvent: 0
       character: 0
-    CustomEvent:
-      useCustomEvent: 0
-      customEvent:
-        m_PersistentCalls:
-          m_Calls: []
+    useCustomEvent: 0
     Event: {fileID: 0}
   - nameText: "\uB098"
-    sentencetext: "\uC5B4\uD734.. \uCC38 \uC790\uB791\uC774\uB2E4 \uC778\uB9C8. \uC54C\uC558\uC5B4.
-      \uC54C\uC558\uB2E4\uACE0."
+    sentencetext: "\uC5B4\uD734.. \uCC38 \uC790\uB791\uC774\uB2E4. \uB09A\uC2DC\uAE00
+      \uC77C\uC218\uB3C4 \uC788\uC796\uC544."
     useEmotion: 0
     EmotionSetting:
     - character: 0
@@ -133,11 +105,7 @@ MonoBehaviour:
     PhaseEvent:
       usePhaseEvent: 0
       character: 0
-    CustomEvent:
-      useCustomEvent: 0
-      customEvent:
-        m_PersistentCalls:
-          m_Calls: []
+    useCustomEvent: 0
     Event: {fileID: 0}
   - nameText: "\uC774\uD604\uC194"
     sentencetext: "\uC774\uBC88 \uC815\uBCF4\uB294 \uB354\uC6B1 \uD655\uC2E4\uD574!
@@ -150,11 +118,7 @@ MonoBehaviour:
     PhaseEvent:
       usePhaseEvent: 0
       character: 0
-    CustomEvent:
-      useCustomEvent: 0
-      customEvent:
-        m_PersistentCalls:
-          m_Calls: []
+    useCustomEvent: 0
     Event: {fileID: 0}
   - nameText: "\uB098"
     sentencetext: .....
@@ -165,11 +129,7 @@ MonoBehaviour:
     PhaseEvent:
       usePhaseEvent: 0
       character: 0
-    CustomEvent:
-      useCustomEvent: 0
-      customEvent:
-        m_PersistentCalls:
-          m_Calls: []
+    useCustomEvent: 0
     Event: {fileID: 0}
   - nameText: "\uC774\uD604\uC194"
     sentencetext: "\uB313\uAE00 \uBC18\uC751\uB3C4 \uC6B0\uB9AC \uB3D9\uB124 \uADFC\uCC98\uB294
@@ -181,11 +141,7 @@ MonoBehaviour:
     PhaseEvent:
       usePhaseEvent: 0
       character: 0
-    CustomEvent:
-      useCustomEvent: 0
-      customEvent:
-        m_PersistentCalls:
-          m_Calls: []
+    useCustomEvent: 0
     Event: {fileID: 0}
   - nameText: "\uB098"
     sentencetext: "\uC74C.. \uADF8\uB7F0\uB370 \uAC15\uC124\uC544\uBA74.. \uD1B1\uC2A4\uD0C0
@@ -197,15 +153,11 @@ MonoBehaviour:
     PhaseEvent:
       usePhaseEvent: 0
       character: 0
-    CustomEvent:
-      useCustomEvent: 0
-      customEvent:
-        m_PersistentCalls:
-          m_Calls: []
+    useCustomEvent: 0
     Event: {fileID: 0}
   - nameText: "\uC774\uD604\uC194"
     sentencetext: "\uADF8\uB798! \uADF8 \uAC15\uC124\uC544\uB77C\uACE0! \uC5BC\uAD74\uB3C4
-      \uB9CC\uC810~ \uB178\uB798\uB3C4 \uB9CC\uC810~"
+      \uC608\uC058\uACE0 \uB178\uB798\uB3C4 \uC798\uBD80\uB974\uB294 \uD1B1\uC2A4\uD0C0!"
     useEmotion: 1
     EmotionSetting:
     - character: 0
@@ -213,11 +165,7 @@ MonoBehaviour:
     PhaseEvent:
       usePhaseEvent: 0
       character: 0
-    CustomEvent:
-      useCustomEvent: 0
-      customEvent:
-        m_PersistentCalls:
-          m_Calls: []
+    useCustomEvent: 0
     Event: {fileID: 0}
   - nameText: "\uB098"
     sentencetext: "\uC624\uD638.. \uBB50 \uB0B4\uAC00 \uC54C\uACE0\uC788\uB294 \uC815\uB3C4\uB77C\uBA74
@@ -229,11 +177,7 @@ MonoBehaviour:
     PhaseEvent:
       usePhaseEvent: 0
       character: 0
-    CustomEvent:
-      useCustomEvent: 0
-      customEvent:
-        m_PersistentCalls:
-          m_Calls: []
+    useCustomEvent: 0
     Event: {fileID: 0}
   - nameText: "\uC774\uD604\uC194"
     sentencetext: "\uADF8\uB798 \uC6B4\uB454\uD615 \uC678\uD1A8\uC774\uC5D0 \uD788\uD0A4\uCF54\uBAA8\uB9AC.
@@ -246,11 +190,7 @@ MonoBehaviour:
     PhaseEvent:
       usePhaseEvent: 0
       character: 0
-    CustomEvent:
-      useCustomEvent: 0
-      customEvent:
-        m_PersistentCalls:
-          m_Calls: []
+    useCustomEvent: 0
     Event: {fileID: 0}
   - nameText: "\uB098"
     sentencetext: "\uADF8\uB0E5 \uB300\uB193\uACE0 \uB098\uB97C \uAE4C\uB0B4\uB9AC\uB294\uAD6C\uB098"
@@ -261,11 +201,7 @@ MonoBehaviour:
     PhaseEvent:
       usePhaseEvent: 0
       character: 0
-    CustomEvent:
-      useCustomEvent: 0
-      customEvent:
-        m_PersistentCalls:
-          m_Calls: []
+    useCustomEvent: 0
     Event: {fileID: 0}
   - nameText: "\uC774\uD604\uC194"
     sentencetext: "\uD788\uD788 \uBA54\uB871~"
@@ -276,11 +212,7 @@ MonoBehaviour:
     PhaseEvent:
       usePhaseEvent: 0
       character: 0
-    CustomEvent:
-      useCustomEvent: 0
-      customEvent:
-        m_PersistentCalls:
-          m_Calls: []
+    useCustomEvent: 0
     Event: {fileID: 0}
   - nameText: "\uB098"
     sentencetext: ......
@@ -291,11 +223,7 @@ MonoBehaviour:
     PhaseEvent:
       usePhaseEvent: 0
       character: 0
-    CustomEvent:
-      useCustomEvent: 0
-      customEvent:
-        m_PersistentCalls:
-          m_Calls: []
+    useCustomEvent: 0
     Event: {fileID: 0}
   - nameText: "\uC774\uD604\uC194"
     sentencetext: "\uADF8\uB7FC \uB098\uB294 \uB2F9\uBC88\uC774\uB77C \uBA3C\uC800
@@ -307,11 +235,7 @@ MonoBehaviour:
     PhaseEvent:
       usePhaseEvent: 1
       character: 0
-    CustomEvent:
-      useCustomEvent: 0
-      customEvent:
-        m_PersistentCalls:
-          m_Calls: []
+    useCustomEvent: 0
     Event: {fileID: 0}
   - nameText: "\uB098"
     sentencetext: "\uC608\uC804\uBD80\uD130 \uC800\uB807\uAC8C \uD65C\uAE30\uCC2C
@@ -323,11 +247,7 @@ MonoBehaviour:
     PhaseEvent:
       usePhaseEvent: 0
       character: 0
-    CustomEvent:
-      useCustomEvent: 0
-      customEvent:
-        m_PersistentCalls:
-          m_Calls: []
+    useCustomEvent: 0
     Event: {fileID: 0}
   - nameText: "\uB098"
     sentencetext: "\uCEE4\uBBA4\uB2C8\uD2F0 \uC911\uB3C5\uC790\uC778 \uAC74 \uB9C8\uC74C\uC5D0
@@ -339,11 +259,7 @@ MonoBehaviour:
     PhaseEvent:
       usePhaseEvent: 0
       character: 0
-    CustomEvent:
-      useCustomEvent: 0
-      customEvent:
-        m_PersistentCalls:
-          m_Calls: []
+    useCustomEvent: 0
     Event: {fileID: 0}
   - nameText: "\uB098"
     sentencetext: "\uAC15\uC124\uC544\uB77C..."
@@ -354,11 +270,7 @@ MonoBehaviour:
     PhaseEvent:
       usePhaseEvent: 0
       character: 0
-    CustomEvent:
-      useCustomEvent: 0
-      customEvent:
-        m_PersistentCalls:
-          m_Calls: []
+    useCustomEvent: 0
     Event: {fileID: 0}
   - nameText: "\uB098"
     sentencetext: "\uC5D0\uC774 \uC124\uB9C8 \uC6B0\uB9AC \uB3D9\uB124\uB85C \uC654\uACA0\uC5B4?"
@@ -369,11 +281,7 @@ MonoBehaviour:
     PhaseEvent:
       usePhaseEvent: 0
       character: 0
-    CustomEvent:
-      useCustomEvent: 0
-      customEvent:
-        m_PersistentCalls:
-          m_Calls: []
+    useCustomEvent: 0
     Event: {fileID: 0}
   - nameText: "\uB098"
     sentencetext: "\uBC18\uC774\uB098 \uAC00\uC790"
@@ -384,11 +292,7 @@ MonoBehaviour:
     PhaseEvent:
       usePhaseEvent: 0
       character: 0
-    CustomEvent:
-      useCustomEvent: 0
-      customEvent:
-        m_PersistentCalls:
-          m_Calls: []
+    useCustomEvent: 0
     Event: {fileID: 0}
   - nameText: 
     sentencetext: "\uC6B0\uB9AC\uBC18\uC740 2\uCE35\uC5D0 \uC788\uB2E4."
@@ -399,21 +303,5 @@ MonoBehaviour:
     PhaseEvent:
       usePhaseEvent: 0
       character: 0
-    CustomEvent:
-      useCustomEvent: 1
-      customEvent:
-        m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 0}
-            m_TargetAssemblyTypeName: 
-            m_MethodName: 
-            m_Mode: 1
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: 
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
+    useCustomEvent: 1
     Event: {fileID: 0}

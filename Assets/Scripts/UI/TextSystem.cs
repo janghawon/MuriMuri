@@ -28,7 +28,7 @@ public class TextSystem : MonoBehaviour
         panel.clicked += ClickEvent;
     }
 
-    private void ClickEvent()
+    public void ClickEvent()
     {
         if(canClick)
         {

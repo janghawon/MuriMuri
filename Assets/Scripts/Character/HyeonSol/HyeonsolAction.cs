@@ -44,8 +44,9 @@ public class HyeonsolAction : MonoBehaviour
         transform.position = new Vector3(8f, 3.451f, -9.7f);
 
         yield return new WaitForSeconds(2f);
-
+        
         SentenceManager.Instance.SetPanel();
         textSystem.canClick = true;
+        textSystem.ClickEvent();
     }
 }
