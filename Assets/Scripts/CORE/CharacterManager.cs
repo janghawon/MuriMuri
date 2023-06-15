@@ -46,9 +46,9 @@ public class CharacterManager : MonoBehaviour
             _characterAnimator = SulA.GetComponent<Animator>();
             selectChar = SulA;
         }
-        
+
+        _navMesh.enabled = true;
         _navMesh.speed = speed;
-        Debug.Log(selectChar.transform.position.y);
         _navMesh.SetDestination(new Vector3(targetPos.x, selectChar.transform.position.y, targetPos.z));
         isWalk = true;
     }
@@ -67,6 +67,8 @@ public class CharacterManager : MonoBehaviour
         }
 
         _navMesh.isStopped = true;
+        _navMesh.enabled = false;
+        isWalk = false;
     }
 
     public void SitSet(CharacterType type, bool check)
@@ -86,15 +88,11 @@ public class CharacterManager : MonoBehaviour
     {
         if (isWalk)
         {
-            if (!_navMesh.isStopped)
-            {
-                _characterAnimator.SetBool("isWalk", true);
-            }
-            else
-            {
-                _characterAnimator.SetBool("isWalk", false);
-                isWalk = false;
-            }
+            _characterAnimator.SetBool("isWalk", true);
+        }
+        else
+        {
+            _characterAnimator.SetBool("isWalk", false);
         }
 
         if(isSit)

@@ -10,8 +10,11 @@ public class TextSystem : MonoBehaviour
     Button panel;
     Label nameTxt;
     Label sentenceTxt;
+
+    public bool canClick;
     private void Awake()
     {
+        canClick = true;
         _uiDocument = GetComponent<UIDocument>();
     }
 
@@ -27,13 +30,16 @@ public class TextSystem : MonoBehaviour
 
     private void ClickEvent()
     {
-        if(SentenceManager.Instance.isTexting)
+        if(canClick)
         {
-            SentenceManager.Instance.LookFastText();
-        }
-        else
-        {
-            SentenceManager.Instance.NextSentence();
+            if (SentenceManager.Instance.isTexting)
+            {
+                SentenceManager.Instance.LookFastText();
+            }
+            else
+            {
+                SentenceManager.Instance.NextSentence();
+            }
         }
     }
 

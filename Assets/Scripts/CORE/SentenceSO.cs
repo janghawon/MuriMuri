@@ -26,13 +26,6 @@ public class PhaseEvent
 }
 
 [System.Serializable]
-public class CustomEvent
-{
-    public bool useCustomEvent;
-    public UnityEvent customEvent;
-}
-
-[System.Serializable]
 public class TextDum
 {
     public string nameText;
@@ -40,7 +33,7 @@ public class TextDum
     public bool useEmotion;
     public List<EmotionDum> EmotionSetting = new List<EmotionDum>();
     public PhaseEvent PhaseEvent;
-    public CustomEvent CustomEvent;
+    public bool useCustomEvent;
     public EventSO Event;
 }
 
