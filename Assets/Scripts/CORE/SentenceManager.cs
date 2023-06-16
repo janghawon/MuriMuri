@@ -41,6 +41,10 @@ public class SentenceManager : MonoBehaviour
     {
         isTexting = true;
         string txt = "";
+        if(storyCount == currentSO.SentenceList.Count - 1)
+        {
+            textSystem.canClick = false;
+        }
         for(int i = 0; i < currentSO.SentenceList[storyCount].sentencetext.Length; i++)
         {
             txt += currentSO.SentenceList[storyCount].sentencetext[i];
@@ -111,12 +115,14 @@ public class SentenceManager : MonoBehaviour
     {
         textSystem.SetPanel(isOnPanel);
         Cursor.visible = !isOnPanel;
+        textSystem.canClick = !isOnPanel;
         isOnPanel = !isOnPanel;
 
     }
 
     public void SentenceRender()
     {
+        SetPanel();
         storyCount = 0;
         currentSO = SentenceList[0];
         SentenceList.RemoveAt(0);

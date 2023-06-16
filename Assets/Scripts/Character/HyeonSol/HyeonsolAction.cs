@@ -46,7 +46,6 @@ public class HyeonsolAction : MonoBehaviour
         yield return new WaitForSeconds(2f);
         
         SentenceManager.Instance.SetPanel();
-        textSystem.canClick = true;
         textSystem.ClickEvent();
     }
 }
