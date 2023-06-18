@@ -20,6 +20,7 @@ public class SentenceManager : MonoBehaviour
     HyeonsolBrain hb;
     SulABrain sb;
     Coroutine textCo;
+
     private void Awake()
     {
         if(Instance != null)
@@ -102,8 +103,8 @@ public class SentenceManager : MonoBehaviour
                 sb.SetAction();
             }
         }
-        #endregion
         
+        #endregion
     }
 
     public void SetPanel()
@@ -111,9 +112,11 @@ public class SentenceManager : MonoBehaviour
         textSystem.SetPanel(isOnPanel);
         Cursor.visible = !isOnPanel;
         textSystem.canClick = !isOnPanel;
+
         isOnPanel = !isOnPanel;
 
     }
+
 
     public void SentenceRender()
     {
