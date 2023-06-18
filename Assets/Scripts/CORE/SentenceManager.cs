@@ -103,12 +103,7 @@ public class SentenceManager : MonoBehaviour
             }
         }
         #endregion
-        #region SO°¥¾Æ³¢¿ì±â
-        if (currentSO.SentenceList.Count == storyCount)
-        {
-            SentenceRender();
-        }
-        #endregion
+        
     }
 
     public void SetPanel()
@@ -122,7 +117,6 @@ public class SentenceManager : MonoBehaviour
 
     public void SentenceRender()
     {
-        SetPanel();
         storyCount = 0;
         currentSO = SentenceList[0];
         SentenceList.RemoveAt(0);
@@ -135,6 +129,7 @@ public class SentenceManager : MonoBehaviour
         sb = CharacterManager.Instance.SulA.GetComponent<SulABrain>();
         currentSO = SentenceList[0];
         StartEmotion();
+        SentenceRender();
     }
 
     private void StartEmotion()

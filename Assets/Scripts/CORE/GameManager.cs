@@ -37,10 +37,10 @@ public class GameManager : MonoBehaviour
         cam.canver = canVer;
     }
 
-    public void SetConversationBefore(GameObject angleObj)
+    public void SetConversationBefore(GameObject angleObj, float val)
     {
         Vector3 dir = angleObj.transform.position - mainCam.transform.position;
-        dir += new Vector3(0, 1, 0);
+        dir += new Vector3(0, val, 0);
         mainCam.transform.rotation = Quaternion.LookRotation(dir);
     }
 }
