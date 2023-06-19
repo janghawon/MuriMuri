@@ -47,7 +47,7 @@ public class HyeonsolBrain : CharacterBrain
                 camera.canver = false;
 
                 GameManager.Instance.SetConversationBefore(this.gameObject, 1);
-                LookPlayer(GameManager.Instance.mainCam);
+                LookTrans(GameManager.Instance.mainCam);
                 canChecking = false;
 
                 SentenceManager.Instance.SetPanel();

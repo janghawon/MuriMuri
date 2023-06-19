@@ -11,7 +11,6 @@ public class SentenceManager : MonoBehaviour
     [SerializeField] private List<SentenceSO> SentenceList = new List<SentenceSO>();
     SentenceSO currentSO;
 
-    int chapterCount = 0;
     int storyCount = 0;
     int customCount = 0;
     bool isOnPanel;
@@ -75,7 +74,7 @@ public class SentenceManager : MonoBehaviour
             for(int i = 0; i < currentSO.SentenceList[storyCount].EmotionSetting.Count; i++)
             {
                 CharacterManager.Instance.SetEmotion(currentSO.SentenceList[storyCount].EmotionSetting[i].character,
-                                                 currentSO.SentenceList[storyCount].EmotionSetting[i].emotion);
+                                                     currentSO.SentenceList[storyCount].EmotionSetting[i].emotion);
             }
         }
         else
@@ -90,6 +89,7 @@ public class SentenceManager : MonoBehaviour
         if (currentSO.SentenceList[storyCount].useCustomEvent)
         {
             _cem.ActionList[customCount]?.Invoke();
+            Debug.Log(customCount);
             customCount++;
         }
         if (currentSO.SentenceList[storyCount].PhaseEvent.usePhaseEvent)

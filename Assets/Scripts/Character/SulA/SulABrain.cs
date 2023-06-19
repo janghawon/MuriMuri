@@ -46,7 +46,7 @@ public class SulABrain : CharacterBrain
                 camera.canver = false;
 
                 GameManager.Instance.SetConversationBefore(this.gameObject, 1);
-                LookPlayer(GameManager.Instance.mainCam);
+                LookTrans(GameManager.Instance.mainCam);
                 canChecking = false;
 
                 SetAction();

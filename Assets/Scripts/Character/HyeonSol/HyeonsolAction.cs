@@ -8,14 +8,12 @@ public class HyeonsolAction : MonoBehaviour
 {
     TextSystem textSystem;
     public List<UnityEvent> ActionDataList = new List<UnityEvent>();
-    PlayerMove move;
     PlayerCamera cam;
 
     Vector3 targetTrans;
     private void Awake()
     {
         textSystem = GameObject.Find("UICANVAS").GetComponent<TextSystem>();
-        move = GameObject.Find("Player").GetComponent<PlayerMove>();
         cam = GameObject.Find("Player").GetComponent<PlayerCamera>();
     }
 

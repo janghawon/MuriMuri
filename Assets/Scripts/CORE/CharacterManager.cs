@@ -6,15 +6,13 @@ using UnityEngine.AI;
 
 public class CharacterManager : MonoBehaviour
 {
-    Animator _characterAnimator;
-    NavMeshAgent _navMesh;
+    Animator[] _characterAnimator = new Animator[2];
+    NavMeshAgent[] _navMesh = new NavMeshAgent[2];
+
     public static CharacterManager Instance;
-    CharacterBrain _characterBrain;
+    CharacterBrain[] _characterBrain = new CharacterBrain[2];
     public GameObject Hyeonsol;
     public GameObject SulA;
-
-    public bool isWalk;
-    bool isSit;
 
     EmotionType currentEmoType;
     private void Awake()
@@ -27,8 +25,12 @@ public class CharacterManager : MonoBehaviour
         DontDestroyOnLoad(this);
         Hyeonsol = GameObject.Find("Hyeonsol");
         SulA = GameObject.Find("SulA");
-        _navMesh = Hyeonsol.GetComponent<NavMeshAgent>();
-        _characterAnimator = Hyeonsol.GetComponent<Animator>();
+        _navMesh[0] = Hyeonsol.GetComponent<NavMeshAgent>();
+        _characterAnimator[0] = Hyeonsol.GetComponent<Animator>();
+        _navMesh[1] = SulA.GetComponent<NavMeshAgent>();
+        _characterAnimator[1] = Hyeonsol.GetComponent<Animator>();
+        _characterBrain[0] = Hyeonsol.GetComponent<CharacterBrain>();
+        _characterBrain[1] = SulA.GetComponent<CharacterBrain>();
     }
 
     public void MoveSet(CharacterType type, Vector3 targetPos, float speed)
@@ -36,78 +38,76 @@ public class CharacterManager : MonoBehaviour
         GameObject selectChar;
         if(type == CharacterType.Hyeonsol)
         {
-            _navMesh = Hyeonsol.GetComponent<NavMeshAgent>();
-            _characterAnimator = Hyeonsol.GetComponent<Animator>();
             selectChar = Hyeonsol;
         }
         else
         {
-            _navMesh = SulA.GetComponent<NavMeshAgent>();
-            _characterAnimator = SulA.GetComponent<Animator>();
             selectChar = SulA;
         }
 
-        _navMesh.enabled = true;
-        _navMesh.speed = speed;
-        _navMesh.SetDestination(new Vector3(targetPos.x, selectChar.transform.position.y, targetPos.z));
-        isWalk = true;
+        _navMesh[(int)type].enabled = true;
+        _navMesh[(int)type].speed = speed;
+        _navMesh[(int)type].SetDestination(new Vector3(targetPos.x, selectChar.transform.position.y, targetPos.z));
+        _characterBrain[(int)type].isWalk = true;
+        Debug.Log(_characterBrain[0]);
     }
 
     public void MoveCancle(CharacterType type)
     {
-        if (type == CharacterType.Hyeonsol)
-        {
-            _navMesh = Hyeonsol.GetComponent<NavMeshAgent>();
-            _characterAnimator = Hyeonsol.GetComponent<Animator>();
-        }
-        else
-        {
-            _navMesh = SulA.GetComponent<NavMeshAgent>();
-            _characterAnimator = SulA.GetComponent<Animator>();
-        }
-
-        _navMesh.isStopped = true;
-        _navMesh.enabled = false;
-        isWalk = false;
+        _navMesh[(int)type].isStopped = true;
+        _navMesh[(int)type].enabled = false;
+        _characterBrain[(int)type].isWalk = false;
     }
 
     public void SitSet(CharacterType type, bool check)
     {
-        if (type == CharacterType.Hyeonsol)
-        {
-            _characterAnimator = Hyeonsol.GetComponent<Animator>();
-        }
-        else
-        {
-            _characterAnimator = SulA.GetComponent<Animator>();
-        }
-        isSit = check;
+        _characterBrain[(int)type].isSit = check;
     }
 
     private void Update()
     {
-        if (isWalk)
+        #region °È±â
+        if (_characterBrain[0].isWalk)
         {
-            _characterAnimator.SetBool("isWalk", true);
+            Debug.Log(_characterAnimator[0]);
+            _characterAnimator[0].SetBool("isWalk", true);
         }
         else
         {
-            _characterAnimator.SetBool("isWalk", false);
+            _characterAnimator[0].SetBool("isWalk", false);
+        }
+        if(_characterBrain[1].isWalk)
+        {
+            _characterAnimator[1].SetBool("isWalk", true);
+        }
+        else
+        {
+            _characterAnimator[1].SetBool("isWalk", false);
+        }
+        #endregion
+        #region ¾É±â
+        if (_characterBrain[0].isSit)
+        {
+            _characterAnimator[0].SetBool("isSit", true);
+        }
+        else
+        {
+            _characterAnimator[0].SetBool("isSit", false);
         }
 
-        if(isSit)
+        if(_characterBrain[0].isSit)
         {
-            _characterAnimator.SetBool("isSit", true);
+            _characterAnimator[1].SetBool("isSit", true);
         }
         else
         {
-            _characterAnimator.SetBool("isSit", false);
+            _characterAnimator[1].SetBool("isSit", false);
         }
+        #endregion
     }
 
     public void SetEmotion(CharacterType type, EmotionType emotion)
     {
-        SelecTyper(type);
         if(emotion == EmotionType.backhand)
         {
             //StartCoroutine(BackhandCo());
@@ -118,7 +118,7 @@ public class CharacterManager : MonoBehaviour
             {
                 return;
             }
-            StartCoroutine(EmoCo(emotion));
+            StartCoroutine(EmoCo(type, emotion));
         }
     }
 
@@ -128,7 +128,7 @@ public class CharacterManager : MonoBehaviour
     //    _characterBrain.SetEmotion(0);
     //}
 
-    IEnumerator EmoCo(EmotionType emotion)
+    IEnumerator EmoCo(CharacterType type, EmotionType emotion)
     {
         currentEmoType = emotion;
         float b = (float)emotion * 0.14285f;
@@ -138,29 +138,14 @@ public class CharacterManager : MonoBehaviour
         {
             a += 0.1f * Time.deltaTime * 5;
             a = Mathf.Clamp(a, a, b);
-            _characterBrain.SetEmotion(a);
+            _characterBrain[(int)type].SetEmotion(a);
             yield return null;
         }
     }
 
     public void ExitEmotion(CharacterType type)
     {
-        SelecTyper(type);
-        _characterBrain.OffEmotion();
+        _characterBrain[(int)type].OffEmotion();
     }
 
-    private void SelecTyper(CharacterType type)
-    {
-        CharacterType selectType = type;
-
-        switch (selectType)
-        {
-            case CharacterType.Hyeonsol:
-                _characterBrain = Hyeonsol.GetComponent<HyeonsolBrain>();
-                break;
-            case CharacterType.SulA:
-                _characterBrain = SulA.GetComponent<SulABrain>();
-                break;
-        }
-    }
 }

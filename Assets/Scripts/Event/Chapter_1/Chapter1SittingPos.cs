@@ -13,6 +13,7 @@ public class Chapter1SittingPos : ChapterBase
 
     protected override void ActionEvent()
     {
+        GameManager.Instance.mainCam.transform.position += new Vector3(0, -0.5f, 0);
         SentenceManager.Instance.SetPanel();
         SentenceManager.Instance.NextSentence();
         GameManager.Instance.SetPlayerState(false, false, false);
