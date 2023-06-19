@@ -19,6 +19,22 @@ public class CustomEventManager : MonoBehaviour
         ActionList[5] = ThirdCustom;
         ActionList[6] = FourthCustom;
         ActionList[7] = FifThCustom;
+        ActionList[8] = SixCustom;
+    }
+
+    public void SixCustom()
+    {
+        StartCoroutine(SixCo());
+    }
+
+    IEnumerator SixCo()
+    {
+        yield return new WaitForSeconds(2);
+        SentenceManager.Instance.SetPanel();
+        GameManager.Instance.mainCam.transform.position += new Vector3(0, 0.5f, 0);
+        GameManager.Instance.SetPlayerState(true, true, true);
+        CharacterBrain _brain = CharacterManager.Instance.SulA.GetComponent<CharacterBrain>();
+        _brain.canChecking = true;
     }
 
     public void FifThCustom()
@@ -31,8 +47,19 @@ public class CustomEventManager : MonoBehaviour
         yield return new WaitForSeconds(2);
         SentenceManager.Instance.SetPanel();
         EXUIManager.Instance.FadePanel(true);
+        yield return new WaitForSeconds(1);
+        CharacterManager.Instance.ExitEmotion(CharacterType.Hyeonsol);
+        CharacterManager.Instance.ExitEmotion(CharacterType.SulA);
+        CharacterManager.Instance.SitSet(CharacterType.Hyeonsol, true);
+        CharacterManager.Instance.SitSet(CharacterType.SulA, true);
+        CharacterManager.Instance.SulA.transform.rotation = Quaternion.Euler(0, -90, 0);
+        CharacterManager.Instance.SulA.transform.position = new Vector3(8f, 3.451f, -8.8f);
         yield return new WaitForSeconds(3);
         EXUIManager.Instance.FadePanel(false);
+        SentenceManager.Instance.SentenceRender();
+        yield return new WaitForSeconds(1.5f);
+        SentenceManager.Instance.SetPanel();
+        SentenceManager.Instance.NextSentence();
     }
 
     public void FourthCustom()

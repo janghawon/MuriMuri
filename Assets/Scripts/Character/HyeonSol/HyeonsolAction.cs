@@ -39,7 +39,7 @@ public class HyeonsolAction : MonoBehaviour
         SentenceManager.Instance.SetPanel();
         CharacterManager.Instance.SitSet(CharacterType.Hyeonsol, true);
         transform.rotation = Quaternion.Euler(new Vector3(0, -90, 0));
-        transform.position = new Vector3(8f, 3.451f, -9.7f);
+        transform.position = new Vector3(8f, 3.451f, -9.8f);
 
         yield return new WaitForSeconds(2f);
         

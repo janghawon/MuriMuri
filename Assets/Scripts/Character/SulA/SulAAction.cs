@@ -16,6 +16,16 @@ public class SulAAction : MonoBehaviour
         textSystem = GameObject.Find("UICANVAS").GetComponent<TextSystem>();
     }
 
+    public void Chapter2Start()
+    {
+        CharacterManager.Instance.SulA.transform.position = new Vector3(9, 2.9f, -8.2f);
+        CharacterManager.Instance.SitSet(CharacterType.SulA, false);
+        SentenceManager.Instance.SetPanel();
+        GameManager.Instance.SetPlayerState(false, false, false);
+        SentenceManager.Instance.NextSentence();
+        GameManager.Instance.SetConversationBefore(this.gameObject, 1);
+    }
+
     public void ClassRunning()
     {
         textSystem.canClick = false;

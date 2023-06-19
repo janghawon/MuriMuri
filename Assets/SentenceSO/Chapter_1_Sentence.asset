@@ -509,8 +509,8 @@ MonoBehaviour:
     useCustomEvent: 1
     Event: {fileID: 0}
   - nameText: "\uB098"
-    sentencetext: "\uC751! \uB9C8\uC74C\uC5D0 \uB4E0\uAC70 \uAC19\uC544\uC11C \uB2E4\uD589\uC774\uB124!
-      \uADF8\uB7FC \uC55E\uC73C\uB85C \uC798\uBD80\uD0C1\uD574!"
+    sentencetext: "\uB9C8\uC74C\uC5D0 \uB4E0\uAC70 \uAC19\uC544\uC11C \uB2E4\uD589\uC774\uB124.
+      \uADF8\uB7FC \uC55E\uC73C\uB85C \uC798\uBD80\uD0C1\uD55C\uB2E4."
     useEmotion: 1
     EmotionSetting:
     - character: 1

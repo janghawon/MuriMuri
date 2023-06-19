@@ -116,7 +116,6 @@ public class SentenceManager : MonoBehaviour
 
     }
 
-
     public void SentenceRender()
     {
         storyCount = 0;
