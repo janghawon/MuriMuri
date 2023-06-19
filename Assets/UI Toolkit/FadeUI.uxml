@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/EX.uss?fileID=7433441132597879392&amp;guid=26fd5d254adc0ca4894d64304ed41de9&amp;type=3#EX" />
+    <ui:VisualElement name="Root" style="height: 100%;">
+        <ui:VisualElement name="FadePanel" class="panel" style="transition-timing-function: ease-out-bounce; transition-duration: 1s;" />
+    </ui:VisualElement>
+</ui:UXML>

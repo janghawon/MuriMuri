@@ -89,7 +89,6 @@ public class SentenceManager : MonoBehaviour
         if (currentSO.SentenceList[storyCount].useCustomEvent)
         {
             _cem.ActionList[customCount]?.Invoke();
-            Debug.Log(customCount);
             customCount++;
         }
         if (currentSO.SentenceList[storyCount].PhaseEvent.usePhaseEvent)

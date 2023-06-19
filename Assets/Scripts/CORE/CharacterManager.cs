@@ -14,7 +14,7 @@ public class CharacterManager : MonoBehaviour
     public GameObject Hyeonsol;
     public GameObject SulA;
 
-    EmotionType currentEmoType;
+    EmotionType[] currentEmoType = new EmotionType[2];
     private void Awake()
     {
         if(Instance != null)
@@ -25,6 +25,7 @@ public class CharacterManager : MonoBehaviour
         DontDestroyOnLoad(this);
         Hyeonsol = GameObject.Find("Hyeonsol");
         SulA = GameObject.Find("SulA");
+
         _navMesh[0] = Hyeonsol.GetComponent<NavMeshAgent>();
         _characterAnimator[0] = Hyeonsol.GetComponent<Animator>();
         _navMesh[1] = SulA.GetComponent<NavMeshAgent>();
@@ -49,7 +50,6 @@ public class CharacterManager : MonoBehaviour
         _navMesh[(int)type].speed = speed;
         _navMesh[(int)type].SetDestination(new Vector3(targetPos.x, selectChar.transform.position.y, targetPos.z));
         _characterBrain[(int)type].isWalk = true;
-        Debug.Log(_characterBrain[0]);
     }
 
     public void MoveCancle(CharacterType type)
@@ -75,6 +75,7 @@ public class CharacterManager : MonoBehaviour
         {
             _characterAnimator[0].SetBool("isWalk", false);
         }
+
         if (_characterBrain[1].isWalk)
         {
             _characterAnimator[1].SetBool("isWalk", true);
@@ -94,7 +95,7 @@ public class CharacterManager : MonoBehaviour
             _characterAnimator[0].SetBool("isSit", false);
         }
 
-        if(_characterBrain[0].isSit)
+        if(_characterBrain[1].isSit)
         {
             _characterAnimator[1].SetBool("isSit", true);
         }
@@ -107,29 +108,15 @@ public class CharacterManager : MonoBehaviour
 
     public void SetEmotion(CharacterType type, EmotionType emotion)
     {
-        if(emotion == EmotionType.backhand)
+        if (emotion != EmotionType.backhand && emotion != currentEmoType[(int)type])
         {
-            //StartCoroutine(BackhandCo());
-        }
-        else
-        {
-            if(emotion == currentEmoType)
-            {
-                return;
-            }
             StartCoroutine(EmoCo(type, emotion));
         }
     }
 
-    //IEnumerator BackhandCo()
-    //{
-
-    //    _characterBrain.SetEmotion(0);
-    //}
-
     IEnumerator EmoCo(CharacterType type, EmotionType emotion)
     {
-        currentEmoType = emotion;
+        currentEmoType[(int)type] = emotion;
         float b = (float)emotion * 0.14285f;
         float a = b - 0.1f;
 

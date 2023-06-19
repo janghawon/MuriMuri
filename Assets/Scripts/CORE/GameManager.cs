@@ -40,7 +40,9 @@ public class GameManager : MonoBehaviour
     public void SetConversationBefore(GameObject angleObj, float val)
     {
         Vector3 dir = angleObj.transform.position - mainCam.transform.position;
-        dir += new Vector3(0, val, 0);
-        mainCam.transform.rotation = Quaternion.LookRotation(dir);
+        dir.Normalize();
+        dir += new Vector3(0, val * 0.25f, 0);
+        mainCam.transform.DORotateQuaternion(Quaternion.LookRotation(dir), 0.5f);
+        //mainCam.transform.rotation = Quaternion.LookRotation(dir);
     }
 }

@@ -22,7 +22,6 @@ public class SulAAction : MonoBehaviour
         CharacterManager.Instance.MoveCancle(CharacterType.SulA);
         this.gameObject.transform.position = new Vector3(8.7f, 3f, -5.7f);
         targetTrans = GameObject.Find("ClassDestinationPos").transform.position;
-        Debug.Log(targetTrans);
         CharacterManager.Instance.MoveSet(CharacterType.SulA, targetTrans, 1);
         StartCoroutine(ClassRunCo());
     }
