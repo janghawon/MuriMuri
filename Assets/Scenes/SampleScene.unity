@@ -1057,17 +1057,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3956621955580481135, guid: 2b77dd9f2c53b544e99ff4b840cdaf93, type: 3}
   m_PrefabInstance: {fileID: 4191117757524543234}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &664792216 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4191117757181750850, guid: 2b77dd9f2c53b544e99ff4b840cdaf93, type: 3}
-  m_PrefabInstance: {fileID: 4191117757524543234}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 664792213}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f20f2d9e150907448b1c35ef6d600211, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &666464520
 GameObject:
   m_ObjectHideFlags: 0
@@ -23147,7 +23136,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Hyeonsol: {fileID: 389985013}
   SulA: {fileID: 664792213}
-  isWalk: 0
 --- !u!1 &1596469023
 GameObject:
   m_ObjectHideFlags: 0
@@ -24134,38 +24122,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SulA
       objectReference: {fileID: 0}
-    - target: {fileID: 4191117757181750850, guid: 2b77dd9f2c53b544e99ff4b840cdaf93, type: 3}
-      propertyPath: ActionDataList.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4191117757181750850, guid: 2b77dd9f2c53b544e99ff4b840cdaf93, type: 3}
-      propertyPath: ActionDataList.Array.data[0].m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4191117757181750850, guid: 2b77dd9f2c53b544e99ff4b840cdaf93, type: 3}
-      propertyPath: ActionDataList.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4191117757181750850, guid: 2b77dd9f2c53b544e99ff4b840cdaf93, type: 3}
-      propertyPath: ActionDataList.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 664792216}
-    - target: {fileID: 4191117757181750850, guid: 2b77dd9f2c53b544e99ff4b840cdaf93, type: 3}
-      propertyPath: ActionDataList.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4191117757181750850, guid: 2b77dd9f2c53b544e99ff4b840cdaf93, type: 3}
-      propertyPath: ActionDataList.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ClassRunning
-      objectReference: {fileID: 0}
-    - target: {fileID: 4191117757181750850, guid: 2b77dd9f2c53b544e99ff4b840cdaf93, type: 3}
-      propertyPath: ActionDataList.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SulAAction, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4191117757181750850, guid: 2b77dd9f2c53b544e99ff4b840cdaf93, type: 3}
-      propertyPath: ActionDataList.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 4441514706981786837, guid: 2b77dd9f2c53b544e99ff4b840cdaf93, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -24219,26 +24175,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5317851885631137562, guid: b9534047bd915b44a82d89a51f464f7c, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5317851885631137562, guid: b9534047bd915b44a82d89a51f464f7c, type: 3}
-      propertyPath: m_AutoRepath
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5317851885631137562, guid: b9534047bd915b44a82d89a51f464f7c, type: 3}
-      propertyPath: m_BaseOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5317851885631137562, guid: b9534047bd915b44a82d89a51f464f7c, type: 3}
-      propertyPath: m_AutoBraking
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5317851885631137562, guid: b9534047bd915b44a82d89a51f464f7c, type: 3}
-      propertyPath: m_AutoTraverseOffMeshLink
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6978549205162877835, guid: b9534047bd915b44a82d89a51f464f7c, type: 3}
       propertyPath: m_Name
       value: Hyeonsol
@@ -24286,10 +24222,6 @@ PrefabInstance:
     - target: {fileID: 7751567059059816753, guid: b9534047bd915b44a82d89a51f464f7c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9101189939568233128, guid: b9534047bd915b44a82d89a51f464f7c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.39
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9534047bd915b44a82d89a51f464f7c, type: 3}

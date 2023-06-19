@@ -28,7 +28,7 @@ public class CharacterManager : MonoBehaviour
         _navMesh[0] = Hyeonsol.GetComponent<NavMeshAgent>();
         _characterAnimator[0] = Hyeonsol.GetComponent<Animator>();
         _navMesh[1] = SulA.GetComponent<NavMeshAgent>();
-        _characterAnimator[1] = Hyeonsol.GetComponent<Animator>();
+        _characterAnimator[1] = SulA.GetComponent<Animator>();
         _characterBrain[0] = Hyeonsol.GetComponent<CharacterBrain>();
         _characterBrain[1] = SulA.GetComponent<CharacterBrain>();
     }
@@ -69,14 +69,13 @@ public class CharacterManager : MonoBehaviour
         #region °È±â
         if (_characterBrain[0].isWalk)
         {
-            Debug.Log(_characterAnimator[0]);
             _characterAnimator[0].SetBool("isWalk", true);
         }
         else
         {
             _characterAnimator[0].SetBool("isWalk", false);
         }
-        if(_characterBrain[1].isWalk)
+        if (_characterBrain[1].isWalk)
         {
             _characterAnimator[1].SetBool("isWalk", true);
         }
