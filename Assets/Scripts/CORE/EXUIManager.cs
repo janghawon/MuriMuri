@@ -24,6 +24,11 @@ public class EXUIManager : MonoBehaviour
             _panel.RemoveFromClassList("on");
     }
 
+    public void SetPanelColor(Color co)
+    {
+        _panel.style.backgroundColor = co;
+    }
+
     private void OnEnable()
     {
         _root = _doc.rootVisualElement;

@@ -276,6 +276,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 79dbd9b4c43845e4f87ed91c5d2146c6, type: 2}
   - {fileID: 11400000, guid: 980a7fd4562a75b4f9cc5e72aa7bf99f, type: 2}
   - {fileID: 11400000, guid: b7c66c9b70b04d14893b9776d29f835e, type: 2}
+  - {fileID: 11400000, guid: aead83b92e127514b8ef0af1e46cdf42, type: 2}
   isTexting: 0
 --- !u!1 &215600223
 GameObject:
@@ -1852,7 +1853,7 @@ Skybox:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
-  m_CustomSkybox: {fileID: 2100000, guid: c52c5d7968fa6c9499b0b5752f899bfb, type: 2}
+  m_CustomSkybox: {fileID: 2100000, guid: efd1c33efd2d58340b88804268e6833f, type: 2}
 --- !u!4 &965628182 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4042200426641824665, guid: cbf202928b26d04448050d35e193b228, type: 3}
@@ -23799,6 +23800,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1714491918}
+  - component: {fileID: 1714491919}
   m_Layer: 0
   m_Name: SchoolBackPos
   m_TagString: Untagged
@@ -23821,6 +23823,18 @@ Transform:
   m_Father: {fileID: 748398865}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1714491919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714491917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a91af7e4ede0df4784781f7cb73f89a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1747792316
 GameObject:
   m_ObjectHideFlags: 0

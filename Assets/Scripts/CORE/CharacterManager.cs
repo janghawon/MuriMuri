@@ -112,7 +112,7 @@ public class CharacterManager : MonoBehaviour
         {
             StartCoroutine(EmoCo(type, emotion));
         }
-        else if(emotion != EmotionType.backhand)
+        else if(emotion == EmotionType.backhand && emotion != currentEmoType[(int)type])
         {
             _characterBrain[(int)type].SetEmotion(0);
         }

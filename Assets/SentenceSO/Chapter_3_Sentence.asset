@@ -99,20 +99,19 @@ MonoBehaviour:
     useEmotion: 1
     EmotionSetting:
     - character: 1
-      emotion: 4
+      emotion: 6
     PhaseEvent:
       usePhaseEvent: 0
       character: 0
     useCustomEvent: 0
     Event: {fileID: 0}
   - nameText: "\uAC15\uC124\uC544"
-    sentencetext: "\uAC89\uC740 \uC73C\uB9AC\uC73C\uB9AC \uD55C\uB370 \uC18D\uC740
-      \uD145 \uBE44\uC5B4\uC788\uB294\uAC8C \uB098\uB791 \uBE44\uC2B7\uD55C\uAC70
-      \uAC19\uC544\uC11C.."
+    sentencetext: "\uBB54\uAC00 \uACF5\uAC10\uB300\uAC00 \uD615\uC131\uB41C\uB2E4?\uB294
+      \uB290\uB08C\uC774\uC57C.."
     useEmotion: 1
     EmotionSetting:
     - character: 1
-      emotion: 4
+      emotion: 6
     PhaseEvent:
       usePhaseEvent: 0
       character: 0
@@ -123,7 +122,7 @@ MonoBehaviour:
     useEmotion: 1
     EmotionSetting:
     - character: 1
-      emotion: 4
+      emotion: 6
     PhaseEvent:
       usePhaseEvent: 0
       character: 0
@@ -134,7 +133,7 @@ MonoBehaviour:
     useEmotion: 1
     EmotionSetting:
     - character: 1
-      emotion: 4
+      emotion: 6
     PhaseEvent:
       usePhaseEvent: 0
       character: 0
@@ -203,7 +202,7 @@ MonoBehaviour:
   - nameText: "\uAC15\uC124\uC544"
     sentencetext: "\uBD88\uD3C9\uD558\uB824\uB294 \uAC74 \uC544\uB2C8\uC57C! \uB2E4\uC2DC
       \uB9D0\uD558\uC9C0\uB9CC \uB204\uB9B4 \uC218 \uC788\uB294 \uAC83\uB3C4 \uB9CE\uC73C\uB2C8\uAE4C!"
-    useEmotion: 1
+    useEmotion: 0
     EmotionSetting:
     - character: 1
       emotion: 1
@@ -214,7 +213,7 @@ MonoBehaviour:
     Event: {fileID: 0}
   - nameText: "\uB098"
     sentencetext: "\uC774\uB7F0\uC800\uB7F0 \uC0DD\uAC01 \uB9CE\uC774 \uD588\uAD6C\uB098."
-    useEmotion: 1
+    useEmotion: 0
     EmotionSetting:
     - character: 1
       emotion: 1
@@ -226,7 +225,7 @@ MonoBehaviour:
   - nameText: "\uB098"
     sentencetext: "\uC5EC\uAE30\uB294 \uC544\uC774\uB4E4\uB3C4 \uAC70\uC758 \uC548\uC624\uACE0
       \uC120\uC0DD\uB2D8\uB4E4\uB3C4 \uC798 \uCC3E\uC9C0 \uC54A\uC544"
-    useEmotion: 1
+    useEmotion: 0
     EmotionSetting:
     - character: 1
       emotion: 1
@@ -238,7 +237,7 @@ MonoBehaviour:
   - nameText: "\uB098"
     sentencetext: "\uB9D0\uD588\uB4EF\uC774 \uC8FC\uBCC0\uC5D0 \uC544\uBB34\uAC83\uB3C4
       \uC5C6\uACE0 \uBC29\uC74C\uB3C4 \uC798 \uB418\uB294 \uACF3\uC774\uC57C"
-    useEmotion: 1
+    useEmotion: 0
     EmotionSetting:
     - character: 1
       emotion: 1
@@ -249,7 +248,7 @@ MonoBehaviour:
     Event: {fileID: 0}
   - nameText: "\uAC15\uC124\uC544"
     sentencetext: "\uC815\uB9D0.. \uBE44\uBC00\uACF5\uAC04\uC774\uAD6C\uB098.."
-    useEmotion: 1
+    useEmotion: 0
     EmotionSetting:
     - character: 1
       emotion: 4
@@ -260,7 +259,7 @@ MonoBehaviour:
     Event: {fileID: 0}
   - nameText: "\uB098"
     sentencetext: "\uB9DE\uC544 \uB098\uB9CC\uC758 \uBE44\uBC00\uACF5\uAC04"
-    useEmotion: 1
+    useEmotion: 0
     EmotionSetting:
     - character: 1
       emotion: 4
@@ -271,7 +270,7 @@ MonoBehaviour:
     Event: {fileID: 0}
   - nameText: "\uAC15\uC124\uC544"
     sentencetext: "\uC774\uC81C \uC6B0\uB9AC\uB9CC\uC758 \uBE44\uBC00\uACF5\uAC04\uC774\uC57C"
-    useEmotion: 1
+    useEmotion: 0
     EmotionSetting:
     - character: 1
       emotion: 0
@@ -283,7 +282,7 @@ MonoBehaviour:
   - nameText: "\uB098"
     sentencetext: "\uC544\uB2C8? \uB098\uB9CC\uC758 \uBE44\uBC00 \uACF5\uAC04\uC774\uC5EC\uC57C\uB9CC
       \uD574"
-    useEmotion: 1
+    useEmotion: 0
     EmotionSetting:
     - character: 1
       emotion: 0
@@ -297,7 +296,7 @@ MonoBehaviour:
     useEmotion: 1
     EmotionSetting:
     - character: 1
-      emotion: 1
+      emotion: 2
     PhaseEvent:
       usePhaseEvent: 0
       character: 0
