@@ -31,12 +31,11 @@ public class SulABrain : CharacterBrain
 
     private void Update()
     {
-        if (canChecking && Vector3.Distance(this.transform.position, GameManager.Instance.Player.transform.position) < 3)
+        if (canChecking && Vector3.Distance(this.transform.position, GameManager.Instance.Player.transform.position) < 2)
         {
             GameManager.Instance.SetConversationBefore(this.gameObject, 1);
             LookTrans(GameManager.Instance.mainCam);
             canChecking = false;
-            Debug.Log("ÀÌ°Å?");
             SetAction();
         }
     }

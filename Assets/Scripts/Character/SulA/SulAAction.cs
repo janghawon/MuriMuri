@@ -7,6 +7,7 @@ using DG.Tweening;
 
 public class SulAAction : MonoBehaviour
 {
+    SulABrain _brain;
     TextSystem textSystem;
     public List<UnityEvent> ActionDataList = new List<UnityEvent>();
 
@@ -14,6 +15,7 @@ public class SulAAction : MonoBehaviour
     private void Awake()
     {
         textSystem = GameObject.Find("UICANVAS").GetComponent<TextSystem>();
+        _brain = GetComponent<SulABrain>();
     }
 
     public void Chapter2Start()
@@ -24,6 +26,7 @@ public class SulAAction : MonoBehaviour
         GameManager.Instance.SetPlayerState(false, false, false);
         SentenceManager.Instance.NextSentence();
         GameManager.Instance.SetConversationBefore(this.gameObject, 1);
+        _brain.LookTrans(GameManager.Instance.mainCam);
     }
 
     public void ClassRunning()

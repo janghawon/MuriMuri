@@ -6,6 +6,7 @@ using CharacterCore;
 
 public class HyeonsolAction : MonoBehaviour
 {
+    HyeonsolBrain _brain;
     TextSystem textSystem;
     public List<UnityEvent> ActionDataList = new List<UnityEvent>();
     PlayerCamera cam;
@@ -13,8 +14,37 @@ public class HyeonsolAction : MonoBehaviour
     Vector3 targetTrans;
     private void Awake()
     {
+        _brain = GetComponent<HyeonsolBrain>();
         textSystem = GameObject.Find("UICANVAS").GetComponent<TextSystem>();
         cam = GameObject.Find("Player").GetComponent<PlayerCamera>();
+    }
+
+    public void ByeBye()
+    {
+        StartCoroutine(ByeCo());
+    }
+
+    IEnumerator ByeCo()
+    {
+        textSystem.canClick = false;
+        yield return new WaitForSeconds(2);
+        CharacterManager.Instance.ExitEmotion(CharacterType.Hyeonsol);
+        targetTrans = GameObject.Find("ClassExitPos").transform.position;
+        CharacterManager.Instance.MoveSet(CharacterType.Hyeonsol, targetTrans, 2);
+
+        yield return new WaitForSeconds(1);
+        textSystem.canClick = true;
+        yield return new WaitForSeconds(1);
+        CharacterManager.Instance.MoveCancle(CharacterType.Hyeonsol);
+        CharacterManager.Instance.Hyeonsol.transform.position = new Vector3(31.7f, 2.9f, 4.4f);
+    }
+
+    public void UpSit()
+    {
+        transform.position = new Vector3(8.31f, 2.9f, -9.276f);
+        CharacterManager.Instance.SitSet(CharacterType.Hyeonsol, false);
+        GameManager.Instance.SetConversationBefore(this.gameObject, 1);
+        _brain.LookTrans(GameManager.Instance.mainCam);
     }
 
     public void RunSchool()

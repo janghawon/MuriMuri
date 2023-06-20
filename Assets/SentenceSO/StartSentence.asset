@@ -145,7 +145,7 @@ MonoBehaviour:
     Event: {fileID: 0}
   - nameText: "\uB098"
     sentencetext: "\uC74C.. \uADF8\uB7F0\uB370 \uAC15\uC124\uC544\uBA74.. \uD1B1\uC2A4\uD0C0
-      \uC5F0\uC560\uC778 \uAC15\uC124\uC544?"
+      \uC5F0\uC608\uC778 \uAC15\uC124\uC544?"
     useEmotion: 0
     EmotionSetting:
     - character: 0

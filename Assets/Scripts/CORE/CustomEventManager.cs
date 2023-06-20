@@ -6,8 +6,9 @@ using CharacterCore;
 
 public class CustomEventManager : MonoBehaviour
 {
+    [SerializeField] private Material _mat;
     TextSystem _textSystem;
-    public Action[] ActionList = new Action[10];
+    public Action[] ActionList = new Action[20];
     private void Awake()
     {
         _textSystem = GameObject.Find("UICANVAS").GetComponent<TextSystem>();
@@ -20,6 +21,30 @@ public class CustomEventManager : MonoBehaviour
         ActionList[6] = FourthCustom;
         ActionList[7] = FifThCustom;
         ActionList[8] = SixCustom;
+        ActionList[9] = FourthCustom;
+        ActionList[10] = TenCustom;
+        ActionList[11] = FourthCustom;
+        ActionList[12] = TenCustom;
+        ActionList[13] = FourthCustom;
+        ActionList[14] = TenCustom;
+        ActionList[15] = FourthCustom;
+        ActionList[16] = ElevenCus;
+    }
+
+    public void ElevenCus()
+    {
+        StartCoroutine(ElevenCusCo());
+    }
+
+    IEnumerator ElevenCusCo()
+    {
+        yield return new WaitForSeconds(2);
+        SentenceManager.Instance.SetPanel();
+        CharacterManager.Instance.ExitEmotion(CharacterType.SulA);
+        GameManager.Instance.SetPlayerState(true, true, true);
+        GameManager.Instance.SetConversationBefore(CharacterManager.Instance.SulA, 1);
+        SulABrain _sb = CharacterManager.Instance.SulA.GetComponent<SulABrain>();
+        _sb.LookTrans(GameManager.Instance.Player);
     }
 
     public void SixCustom()
@@ -29,6 +54,7 @@ public class CustomEventManager : MonoBehaviour
 
     IEnumerator SixCo()
     {
+        _textSystem.canClick = false;
         yield return new WaitForSeconds(2);
         SentenceManager.Instance.SetPanel();
         GameManager.Instance.mainCam.transform.position += new Vector3(0, 0.5f, 0);
@@ -47,6 +73,10 @@ public class CustomEventManager : MonoBehaviour
         yield return new WaitForSeconds(2);
         SentenceManager.Instance.SetPanel();
         EXUIManager.Instance.FadePanel(true);
+        Light _li = GameObject.Find("Directional Light").GetComponent<Light>();
+        _li.gameObject.transform.rotation = Quaternion.Euler(120, -45, 0);
+        Skybox sb = GameManager.Instance.mainCam.GetComponent<Skybox>();
+        sb.material = _mat;
         yield return new WaitForSeconds(1);
         CharacterManager.Instance.ExitEmotion(CharacterType.Hyeonsol);
         CharacterManager.Instance.ExitEmotion(CharacterType.SulA);
@@ -60,6 +90,11 @@ public class CustomEventManager : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         SentenceManager.Instance.SetPanel();
         SentenceManager.Instance.NextSentence();
+    }
+
+    public void TenCustom()
+    {
+        GameManager.Instance.SetConversationBefore(CharacterManager.Instance.Hyeonsol, 1);
     }
 
     public void FourthCustom()

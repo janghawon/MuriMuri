@@ -33,27 +33,14 @@ public class HyeonsolBrain : CharacterBrain
 
     private void Update()
     {
-        if(canChecking)
+        if(canChecking && Vector3.Distance(this.gameObject.transform.position, GameManager.Instance.Player.transform.position) < 2.5f)
         {
-            Collider[] hit = Physics.OverlapBox(transform.position, (transform.lossyScale * 5) / 2, Quaternion.identity, _whatIsPlayer);
-
-            foreach (Collider hited in hit)
-            {
-                PlayerMove playerMove = hited.GetComponent<PlayerMove>();
-                PlayerCamera camera = hited.GetComponent<PlayerCamera>();
-
-                playerMove.canMove = false;
-                camera.canhor = false;
-                camera.canver = false;
-
-                GameManager.Instance.SetConversationBefore(this.gameObject, 1);
-                LookTrans(GameManager.Instance.mainCam);
-                canChecking = false;
-
-                SentenceManager.Instance.SetPanel();
-                SentenceManager.Instance.NextSentence();
-                Cursor.visible = true;
-            }
+            GameManager.Instance.SetConversationBefore(this.gameObject, 1);
+            LookTrans(GameManager.Instance.mainCam);
+            canChecking = false;
+            GameManager.Instance.SetPlayerState(false, false, false);
+            SentenceManager.Instance.SetPanel();
+            SentenceManager.Instance.NextSentence();
         }
     }
 

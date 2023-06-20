@@ -54,7 +54,7 @@ public class CharacterManager : MonoBehaviour
 
     public void MoveCancle(CharacterType type)
     {
-        _navMesh[(int)type].isStopped = true;
+        //_navMesh[(int)type].isStopped = true;
         _navMesh[(int)type].enabled = false;
         _characterBrain[(int)type].isWalk = false;
     }
@@ -111,6 +111,10 @@ public class CharacterManager : MonoBehaviour
         if (emotion != EmotionType.backhand && emotion != currentEmoType[(int)type])
         {
             StartCoroutine(EmoCo(type, emotion));
+        }
+        else if(emotion != EmotionType.backhand)
+        {
+            _characterBrain[(int)type].SetEmotion(0);
         }
     }
 

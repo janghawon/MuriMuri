@@ -13,7 +13,7 @@ public abstract class CharacterBrain : MonoBehaviour
     
     [SerializeField] protected LayerMask _whatIsPlayer;
     
-    protected void LookTrans(GameObject trans)
+    public void LookTrans(GameObject trans)
     {
         Vector3 dir = trans.transform.position - transform.position;
         float yRot = Mathf.Atan2(dir.x, dir.z) * Mathf.Rad2Deg;
