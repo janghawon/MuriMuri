@@ -7,40 +7,67 @@ using DG.Tweening;
 
 public class CustomEventManager : MonoBehaviour
 {
+    [SerializeField] private GameObject _backPos;
     [SerializeField] private Material _mat;
     [SerializeField] private GameObject _axe;
     TextSystem _textSystem;
-    public Action[] ActionList = new Action[20];
+    public Action[] ActionList = new Action[25];
     private void Awake()
     {
         _textSystem = GameObject.Find("UICANVAS").GetComponent<TextSystem>();
-        ActionList[0] = TwelveCus;
-        ActionList[1] = ThirdTenCus;
-        ActionList[2] = ForTenCus;
-        //ActionList[0] = FirstCustom;
-        //ActionList[1] = FirstCustom;
-        //ActionList[2] = SecondCustom;
-        //ActionList[3] = ThirdCustom;
-        //ActionList[4] = FourthCustom;
-        //ActionList[5] = ThirdCustom;
-        //ActionList[6] = FourthCustom;
-        //ActionList[7] = FifThCustom;
-        //ActionList[8] = SixCustom;
-        //ActionList[9] = FourthCustom;
-        //ActionList[10] = TenCustom;
-        //ActionList[11] = FourthCustom;
-        //ActionList[12] = TenCustom;
-        //ActionList[13] = FourthCustom;
-        //ActionList[14] = TenCustom;
-        //ActionList[15] = FourthCustom;
-        //ActionList[16] = ElevenCus;
-        //ActionList[17] = TwelveCus;
-        //ActionList[18] = ThirdTenCus;
-        //ActionList[19] = ForTenCus;
+        //ActionList[0] = TwelveCus;
+        //ActionList[1] = ThirdTenCus;
+        //ActionList[2] = ForTenCus;
+        ActionList[0] = FirstCustom;
+        ActionList[1] = FirstCustom;
+        ActionList[2] = SecondCustom;
+        ActionList[3] = ThirdCustom;
+        ActionList[4] = FourthCustom;
+        ActionList[5] = ThirdCustom;
+        ActionList[6] = FourthCustom;
+        ActionList[7] = FifThCustom;
+        ActionList[8] = SixCustom;
+        ActionList[9] = FourthCustom;
+        ActionList[10] = TenCustom;
+        ActionList[11] = FourthCustom;
+        ActionList[12] = TenCustom;
+        ActionList[13] = FourthCustom;
+        ActionList[14] = TenCustom;
+        ActionList[15] = FourthCustom;
+        ActionList[16] = ElevenCus;
+        ActionList[17] = TwelveCus;
+        ActionList[18] = ThirdTenCus;
+        ActionList[19] = ForTenCus;
+        ActionList[20] = FiveTenCus;
+        ActionList[21] = FirstCustom;
+        ActionList[22] = FourthCustom;
+    }
+
+
+
+    public void FiveTenCus()
+    {
+        StartCoroutine(FiveTenCusCo());
+    }
+
+    IEnumerator FiveTenCusCo()
+    {
+        _textSystem.canClick = false;
+        GameManager.Instance.Player.transform.position = new Vector3(-6.7f, -0.17f, 14f);
+        GameManager.Instance.SetPlayerState(true, true, true);
+        SentenceManager.Instance.SetPanel();
+        yield return new WaitForSeconds(3);
+        EXUIManager.Instance.FadePanel(false);
+        yield return new WaitForSeconds(2);
+        SentenceManager.Instance.SetPanel();
+        SentenceManager.Instance.NextSentence();
+        Chapter1SittingPos pos = GameObject.Find("Chapter_1_SittingPos").GetComponent<Chapter1SittingPos>();
+        pos.isStart = true;
     }
 
     public void ForTenCus()
     {
+        EXUIManager.Instance.UseGlitch(true, new Vector3(-4.6f, 1.1f, -14.3f), new Vector3(0, 90, 0));
         GameObject ax = GameObject.Find("axe(Clone)");
         GameObject.Find("axe(Clone)").transform.parent = null;
         Sequence swq = DOTween.Sequence();
@@ -52,15 +79,20 @@ public class CustomEventManager : MonoBehaviour
 
     IEnumerator ForTenCusCo()
     {
+        yield return new WaitForSeconds(1);
         EXUIManager.Instance.SetPanelColor(Color.red);
         EXUIManager.Instance.FadePanel(true);
+        SentenceManager.Instance.SetPanel();
         yield return new WaitForSeconds(2);
+        SentenceManager.Instance.SentenceRender();
+        SentenceManager.Instance.SetPanel();
+        SentenceManager.Instance.NextSentence();
     }
 
     public void ThirdTenCus()
     {
         GameObject.Find("axe(Clone)").transform.parent = GameManager.Instance.Player.transform;
-        GameManager.Instance.Player.transform.DOMoveX(-5.5f, 1);
+        GameManager.Instance.Player.transform.DOMoveX(-5.5f, 0.7f);
     }
 
     public void TwelveCus()
@@ -88,6 +120,7 @@ public class CustomEventManager : MonoBehaviour
 
     IEnumerator ElevenCusCo()
     {
+        _backPos.gameObject.SetActive(true);
         yield return new WaitForSeconds(2);
         SentenceManager.Instance.SetPanel();
         CharacterManager.Instance.ExitEmotion(CharacterType.SulA);

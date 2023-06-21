@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class ChapterBase : MonoBehaviour
 {
-    protected bool isStart;
+    public bool isStart;
     protected float distance;
 
     protected abstract void Awake();

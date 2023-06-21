@@ -5,6 +5,7 @@ using UnityEngine.UIElements;
 
 public class EXUIManager : MonoBehaviour
 {
+    [SerializeField] private GameObject GlitchFace;
     public static EXUIManager Instance;
     UIDocument _doc;
     VisualElement _root;
@@ -13,7 +14,16 @@ public class EXUIManager : MonoBehaviour
     {
         Instance = this;
         _doc = GetComponent<UIDocument>();
+        GlitchFace = GameObject.Find("GlitchFace");
+        GlitchFace.SetActive(false);
         DontDestroyOnLoad(this);
+    }
+
+    public void UseGlitch(bool isUse, Vector3 pos, Vector3 rot)
+    {
+        GlitchFace.SetActive(isUse);
+        GlitchFace.transform.position = pos;
+        GlitchFace.transform.rotation = Quaternion.Euler(rot);
     }
 
     public void FadePanel(bool isUp)

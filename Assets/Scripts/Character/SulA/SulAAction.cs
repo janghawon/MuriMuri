@@ -7,6 +7,7 @@ using DG.Tweening;
 
 public class SulAAction : MonoBehaviour
 {
+    [SerializeField] private GameObject _booldEffect;
     SulABrain _brain;
     TextSystem textSystem;
     public List<UnityEvent> ActionDataList = new List<UnityEvent>();
@@ -18,8 +19,47 @@ public class SulAAction : MonoBehaviour
         _brain = GetComponent<SulABrain>();
     }
 
+    public void SCARE()
+    {
+        _brain.LookTrans(GameManager.Instance.mainCam);
+    }
+
+    public void REBIND()
+    {
+        this.gameObject.transform.position = new Vector3(8.7f, 3f, -5.7f);
+        this.gameObject.transform.rotation = Quaternion.Euler(0, -142, 0);
+        CharacterManager.Instance.SetEmotion(CharacterType.SulA, EmotionType.armhang);
+    }
+
+    public void CancleLook()
+    {
+        _brain.LookTrans(GameManager.Instance.mainCam);
+        GameManager.Instance.SetConversationBefore(CharacterManager.Instance.SulA, 1);
+    }
+
+    public void LookBuilding()
+    {
+        GameObject pos = GameObject.Find("BuildingPos");
+        _brain.LookTrans(pos);
+        GameManager.Instance.SetConversationBefore(pos, 0);
+    }
+
+    public void SulaDie()
+    {
+        StartCoroutine(SUDIE());
+    }
+
+    IEnumerator SUDIE()
+    {
+        yield return new WaitForSeconds(0.25f);
+        GameObject blood = Instantiate(_booldEffect);
+        blood.transform.position = new Vector3(-4.38f, 0.75f, -14.46f);
+        blood.transform.rotation = Quaternion.Euler(-42.1f, 129, 0);
+    }
+
     public void Chapter2Start()
     {
+        GameManager.Instance.Player.transform.position = new Vector3(6.5f, 2.83f, -7.7f);
         CharacterManager.Instance.SulA.transform.position = new Vector3(9, 2.9f, -8.2f);
         CharacterManager.Instance.SitSet(CharacterType.SulA, false);
         SentenceManager.Instance.SetPanel();

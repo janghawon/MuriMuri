@@ -4286,12 +4286,69 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20f2d9e150907448b1c35ef6d600211, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _booldEffect: {fileID: 1000013355911406, guid: d32aa916f50cac94db11e6f19821a58f, type: 3}
   ActionDataList:
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4191117757181750850}
         m_TargetAssemblyTypeName: SulAAction, Assembly-CSharp
         m_MethodName: ClassRunning
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4191117757181750850}
+        m_TargetAssemblyTypeName: SulAAction, Assembly-CSharp
+        m_MethodName: Chapter2Start
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4191117757181750850}
+        m_TargetAssemblyTypeName: SulAAction, Assembly-CSharp
+        m_MethodName: LookBuilding
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4191117757181750850}
+        m_TargetAssemblyTypeName: SulAAction, Assembly-CSharp
+        m_MethodName: CancleLook
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4191117757181750850}
+        m_TargetAssemblyTypeName: SulAAction, Assembly-CSharp
+        m_MethodName: SulaDie
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4314,6 +4371,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canChecking: 0
+  isSit: 0
+  isWalk: 0
   _whatIsPlayer:
     serializedVersion: 2
     m_Bits: 0

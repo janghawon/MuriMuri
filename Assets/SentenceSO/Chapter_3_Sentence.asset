@@ -23,7 +23,7 @@ MonoBehaviour:
       character: 0
     useCustomEvent: 0
     Event: {fileID: 0}
-  - nameText: "\uAC15\uC124\uC544"
+  - nameText: "\uAC15\uC2DC\uC544"
     sentencetext: "\uADF8\uB298\uC838\uC11C \uC2DC\uC6D0\uD558\uB2E4~ \uADF8\uB9AC\uACE0
       \uC9C4\uC9DC \uC870\uC6A9\uD55C\uB370?"
     useEmotion: 0
@@ -43,11 +43,11 @@ MonoBehaviour:
     - character: 1
       emotion: 2
     PhaseEvent:
-      usePhaseEvent: 0
-      character: 0
+      usePhaseEvent: 1
+      character: 1
     useCustomEvent: 0
     Event: {fileID: 0}
-  - nameText: "\uAC15\uC124\uC544"
+  - nameText: "\uAC15\uC2DC\uC544"
     sentencetext: "\uC800\uB807\uAC8C \uD070\uB370?"
     useEmotion: 1
     EmotionSetting:
@@ -70,7 +70,7 @@ MonoBehaviour:
       character: 0
     useCustomEvent: 0
     Event: {fileID: 0}
-  - nameText: "\uAC15\uC124\uC544"
+  - nameText: "\uAC15\uC2DC\uC544"
     sentencetext: "\uBB54\uAC00 \uC548\uC4F0\uB7FD\uB124.."
     useEmotion: 1
     EmotionSetting:
@@ -92,7 +92,7 @@ MonoBehaviour:
       character: 0
     useCustomEvent: 0
     Event: {fileID: 0}
-  - nameText: "\uAC15\uC124\uC544"
+  - nameText: "\uAC15\uC2DC\uC544"
     sentencetext: "\uAC89\uC740 \uC73C\uB9AC\uC73C\uB9AC \uD55C\uB370 \uC18D\uC740
       \uD145 \uBE44\uC5B4\uC788\uB294\uAC8C \uB098\uB791 \uBE44\uC2B7\uD55C\uAC70
       \uAC19\uC544\uC11C.."
@@ -101,11 +101,11 @@ MonoBehaviour:
     - character: 1
       emotion: 6
     PhaseEvent:
-      usePhaseEvent: 0
-      character: 0
+      usePhaseEvent: 1
+      character: 1
     useCustomEvent: 0
     Event: {fileID: 0}
-  - nameText: "\uAC15\uC124\uC544"
+  - nameText: "\uAC15\uC2DC\uC544"
     sentencetext: "\uBB54\uAC00 \uACF5\uAC10\uB300\uAC00 \uD615\uC131\uB41C\uB2E4?\uB294
       \uB290\uB08C\uC774\uC57C.."
     useEmotion: 1
@@ -139,7 +139,7 @@ MonoBehaviour:
       character: 0
     useCustomEvent: 0
     Event: {fileID: 0}
-  - nameText: "\uAC15\uC124\uC544"
+  - nameText: "\uAC15\uC2DC\uC544"
     sentencetext: "\uC544\uB2C8\uC544\uB2C8! \uB108\uBB34 \uAC71\uC815\uD560 \uC815\uB3C4\uB294
       \uC544\uB2C8\uC57C!"
     useEmotion: 1
@@ -151,7 +151,7 @@ MonoBehaviour:
       character: 0
     useCustomEvent: 0
     Event: {fileID: 0}
-  - nameText: "\uAC15\uC124\uC544"
+  - nameText: "\uAC15\uC2DC\uC544"
     sentencetext: "\uADF8\uB0E5 \uBB50\uB784\uAE4C.. \uB0B4\uAC00 \uB204\uB9B4 \uC218
       \uC788\uB294 \uD2B9\uAD8C\uB3C4 \uB9CE\uC9C0\uB9CC \uC544\uB2CC\uAC83\uB3C4
       \uB9CE\uC544\uC11C.."
@@ -164,7 +164,7 @@ MonoBehaviour:
       character: 0
     useCustomEvent: 0
     Event: {fileID: 0}
-  - nameText: "\uAC15\uC124\uC544"
+  - nameText: "\uAC15\uC2DC\uC544"
     sentencetext: "\uD3C9\uBC94\uD55C \uB098\uC787\uB300\uC758 \uB610\uB798\uB791\uC740
       \uB610 \uB9CE\uC774 \uB2E4\uB974\uAC8C \uC0B4\uACE0 \uC788\uC73C\uB2C8\uAE4C.."
     useEmotion: 1
@@ -176,7 +176,7 @@ MonoBehaviour:
       character: 0
     useCustomEvent: 0
     Event: {fileID: 0}
-  - nameText: "\uAC15\uC124\uC544"
+  - nameText: "\uAC15\uC2DC\uC544"
     sentencetext: "\uADF8 \uD3C9\uBC94\uD568\uC774 \uC870\uAE08 \uBD80\uB7EC\uC6E0\uB2EC\uAE4C..
       \uC544\uD558\uD558.."
     useEmotion: 1
@@ -199,7 +199,7 @@ MonoBehaviour:
       character: 0
     useCustomEvent: 0
     Event: {fileID: 0}
-  - nameText: "\uAC15\uC124\uC544"
+  - nameText: "\uAC15\uC2DC\uC544"
     sentencetext: "\uBD88\uD3C9\uD558\uB824\uB294 \uAC74 \uC544\uB2C8\uC57C! \uB2E4\uC2DC
       \uB9D0\uD558\uC9C0\uB9CC \uB204\uB9B4 \uC218 \uC788\uB294 \uAC83\uB3C4 \uB9CE\uC73C\uB2C8\uAE4C!"
     useEmotion: 0
@@ -246,7 +246,7 @@ MonoBehaviour:
       character: 0
     useCustomEvent: 0
     Event: {fileID: 0}
-  - nameText: "\uAC15\uC124\uC544"
+  - nameText: "\uAC15\uC2DC\uC544"
     sentencetext: "\uC815\uB9D0.. \uBE44\uBC00\uACF5\uAC04\uC774\uAD6C\uB098.."
     useEmotion: 0
     EmotionSetting:
@@ -268,8 +268,9 @@ MonoBehaviour:
       character: 0
     useCustomEvent: 0
     Event: {fileID: 0}
-  - nameText: "\uAC15\uC124\uC544"
-    sentencetext: "\uC774\uC81C \uC6B0\uB9AC\uB9CC\uC758 \uBE44\uBC00\uACF5\uAC04\uC774\uC57C"
+  - nameText: "\uAC15\uC2DC\uC544"
+    sentencetext: "\uC774\uC81C \uC6B0\uB9AC\uB9CC\uC758 \uBE44\uBC00\uACF5\uAC04\uC774\uB124?
+      \uD788\uD788"
     useEmotion: 0
     EmotionSetting:
     - character: 1
@@ -280,8 +281,7 @@ MonoBehaviour:
     useCustomEvent: 0
     Event: {fileID: 0}
   - nameText: "\uB098"
-    sentencetext: "\uC544\uB2C8? \uB098\uB9CC\uC758 \uBE44\uBC00 \uACF5\uAC04\uC774\uC5EC\uC57C\uB9CC
-      \uD574"
+    sentencetext: "\uC544\uB2C8? \uB098\uB9CC\uC758 \uBE44\uBC00 \uACF5\uAC04\uC778\uB370?"
     useEmotion: 0
     EmotionSetting:
     - character: 1
@@ -291,9 +291,10 @@ MonoBehaviour:
       character: 0
     useCustomEvent: 0
     Event: {fileID: 0}
-  - nameText: "\uAC15\uC124\uC544"
-    sentencetext: "\uC74C? \uBB34\uC2A8\uC18C\uB9AC\uC57C?"
-    useEmotion: 1
+  - nameText: "\uAC15\uC2DC\uC544"
+    sentencetext: "\uC74C? \uBB34\uC2A8\uC18C\uB9AC\uC57C? \uC774\uC81C \uB098\uB3C4
+      \uC54C\uAC8C \uB410\uC7AB\uC544."
+    useEmotion: 0
     EmotionSetting:
     - character: 1
       emotion: 2
@@ -304,7 +305,7 @@ MonoBehaviour:
     Event: {fileID: 0}
   - nameText: "\uB098"
     sentencetext: "\uC774\uB7F0 \uC18C\uB9AC\uC57C"
-    useEmotion: 1
+    useEmotion: 0
     EmotionSetting:
     - character: 1
       emotion: 1
@@ -316,7 +317,63 @@ MonoBehaviour:
   - nameText: 
     sentencetext: "\uBC14\uB2E5\uC5D0 \uB5A8\uC5B4\uC838 \uC788\uB294 \uB3C4\uB07C\uB97C
       \uB4E0\uB2E4."
+    useEmotion: 0
+    EmotionSetting:
+    - character: 1
+      emotion: 1
+    PhaseEvent:
+      usePhaseEvent: 0
+      character: 0
+    useCustomEvent: 1
+    Event: {fileID: 0}
+  - nameText: "\uAC15\uC2DC\uC544"
+    sentencetext: "\uC5B4..? \uADF8\uAC74?"
+    useEmotion: 0
+    EmotionSetting:
+    - character: 1
+      emotion: 2
+    PhaseEvent:
+      usePhaseEvent: 0
+      character: 0
+    useCustomEvent: 0
+    Event: {fileID: 0}
+  - nameText: "\uB098"
+    sentencetext: "\uB3C4\uB07C? \uC774\uAC8C \uC65C?"
     useEmotion: 1
+    EmotionSetting:
+    - character: 1
+      emotion: 2
+    PhaseEvent:
+      usePhaseEvent: 0
+      character: 0
+    useCustomEvent: 0
+    Event: {fileID: 0}
+  - nameText: "\uAC15\uC2DC\uC544"
+    sentencetext: "\uBB50\uD558\uB7EC \uB4E0\uAC70\uC57C? \uC704\uD5D8\uD558\uB2C8\uAE4C
+      \uBE68\uB9AC \uB0B4\uB824\uB194..!"
+    useEmotion: 1
+    EmotionSetting:
+    - character: 1
+      emotion: 4
+    PhaseEvent:
+      usePhaseEvent: 0
+      character: 0
+    useCustomEvent: 0
+    Event: {fileID: 0}
+  - nameText: "\uB098"
+    sentencetext: "\uC751? \uBB54\uC18C\uB9AC\uC57C? \uC774\uAC78\uB85C \uB110 \uC8FD\uC77C\uAC74\uB370?"
+    useEmotion: 1
+    EmotionSetting:
+    - character: 1
+      emotion: 4
+    PhaseEvent:
+      usePhaseEvent: 0
+      character: 0
+    useCustomEvent: 0
+    Event: {fileID: 0}
+  - nameText: "\uAC15\uC2DC\uC544"
+    sentencetext: "\uC5D0?"
+    useEmotion: 0
     EmotionSetting:
     - character: 1
       emotion: 1
@@ -324,4 +381,118 @@ MonoBehaviour:
       usePhaseEvent: 0
       character: 0
     useCustomEvent: 0
+    Event: {fileID: 0}
+  - nameText: "\uAC15\uC2DC\uC544"
+    sentencetext: "\uBB50? "
+    useEmotion: 0
+    EmotionSetting:
+    - character: 1
+      emotion: 1
+    PhaseEvent:
+      usePhaseEvent: 0
+      character: 0
+    useCustomEvent: 0
+    Event: {fileID: 0}
+  - nameText: "\uAC15\uC2DC\uC544"
+    sentencetext: "\uC544\uB2C8\uC544\uB2C8, \uC560\uCD08\uC5D0 \uC65C \uAC70\uAE30
+      \uB3C4\uB07C\uAC00 \uC790\uC5F0\uC2A4\uB7FD\uAC8C \uC788\uB294\uAC74\uB370?"
+    useEmotion: 0
+    EmotionSetting:
+    - character: 1
+      emotion: 1
+    PhaseEvent:
+      usePhaseEvent: 0
+      character: 0
+    useCustomEvent: 0
+    Event: {fileID: 0}
+  - nameText: "\uAC15\uC2DC\uC544"
+    sentencetext: "\uADF8\uB9AC\uACE0 \uC8FD\uC778\uB2E4\uACE0? \uBB34\uC11C\uC6B0\uB2C8\uAE4C
+      \uB18D\uB2F4 \uADF8\uB9CC\uD574\uC918"
+    useEmotion: 0
+    EmotionSetting:
+    - character: 1
+      emotion: 1
+    PhaseEvent:
+      usePhaseEvent: 0
+      character: 0
+    useCustomEvent: 0
+    Event: {fileID: 0}
+  - nameText: "\uB098"
+    sentencetext: "\uC751? \uB098\uC57C\uB9D0\uB85C \uC774\uD574\uAC00 \uC548\uB418\uB294\uB370?"
+    useEmotion: 0
+    EmotionSetting:
+    - character: 1
+      emotion: 1
+    PhaseEvent:
+      usePhaseEvent: 0
+      character: 0
+    useCustomEvent: 0
+    Event: {fileID: 0}
+  - nameText: "\uB098"
+    sentencetext: "\uB0B4\uAC00 \uB3C4\uB07C\uAE4C\uC9C0 \uB4E4\uC5C8\uC796\uC544.
+      \uC774\uAC74 \uB0B4\uAC00 \uC5EC\uAE30 \uB178\uB3E0\uB454 \uB3C4\uB07C\uC57C."
+    useEmotion: 0
+    EmotionSetting:
+    - character: 1
+      emotion: 1
+    PhaseEvent:
+      usePhaseEvent: 0
+      character: 0
+    useCustomEvent: 0
+    Event: {fileID: 0}
+  - nameText: "\uAC15\uC2DC\uC544"
+    sentencetext: "\uC7A5\uB09C\uD558\uC9C0 \uB9C8! \uBB34\uC2A8 \uC18C\uB9AC \uD558\uB294\uAC70\uC57C!"
+    useEmotion: 1
+    EmotionSetting:
+    - character: 1
+      emotion: 4
+    PhaseEvent:
+      usePhaseEvent: 0
+      character: 0
+    useCustomEvent: 0
+    Event: {fileID: 0}
+  - nameText: "\uB098"
+    sentencetext: "\uBB34\uC2A8\uC18C\uB9AC\uACE0 \uC790\uC2DC\uACE0, \uB108 \uACE7
+      \uC8FD\uC744\uAC74\uB370?"
+    useEmotion: 1
+    EmotionSetting:
+    - character: 1
+      emotion: 4
+    PhaseEvent:
+      usePhaseEvent: 0
+      character: 0
+    useCustomEvent: 0
+    Event: {fileID: 0}
+  - nameText: "\uAC15\uC2DC\uC544"
+    sentencetext: "\uC624, \uC624\uC9C0\uB9C8! \uC2E0\uACE0\uD560\uAEBC\uC57C!"
+    useEmotion: 0
+    EmotionSetting:
+    - character: 1
+      emotion: 0
+    PhaseEvent:
+      usePhaseEvent: 0
+      character: 0
+    useCustomEvent: 0
+    Event: {fileID: 0}
+  - nameText: "\uB098"
+    sentencetext: "\uD574\uBCF4\uC2DC\uB4E0\uC9C0"
+    useEmotion: 0
+    EmotionSetting:
+    - character: 1
+      emotion: 0
+    PhaseEvent:
+      usePhaseEvent: 0
+      character: 0
+    useCustomEvent: 1
+    Event: {fileID: 0}
+  - nameText: "\uB098"
+    sentencetext: "\uC544 \uB9DE\uB2E4. \uCE5C\uAD6C \uBABB\uD574\uC918\uC11C \uBBF8\uC548\uD574. "
+    useEmotion: 0
+    EmotionSetting:
+    - character: 1
+      emotion: 0
+    PhaseEvent:
+      usePhaseEvent: 1
+      character: 1
+    useCustomEvent: 1
     Event: {fileID: 0}
