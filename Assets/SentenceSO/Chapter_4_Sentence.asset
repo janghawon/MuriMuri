@@ -51,7 +51,7 @@ MonoBehaviour:
     useCustomEvent: 0
     Event: {fileID: 0}
   - nameText: 
-    sentencetext: "\uB098\uB97C \uBABB\uBA48\uCD94\uAC8C\uD55C\uB2E4."
+    sentencetext: "\uB098\uB97C \uB4F1\uB5A0\uBBFC\uB2E4."
     useEmotion: 0
     EmotionSetting: []
     PhaseEvent:
@@ -228,10 +228,11 @@ MonoBehaviour:
     useCustomEvent: 0
     Event: {fileID: 0}
   - nameText: 
-    sentencetext: "\uC65C\uC9C0? \uC65C\uC9C0? \uC65C\uC9C0? \uC65C\uC9C0? \uC65C\uC9C0?
-      \uC65C\uC9C0? \uC65C\uC9C0? \uC65C\uC9C0? \uC65C\uC9C0? \uC65C\uC9C0? \uC65C\uC9C0?
-      \uC65C\uC9C0? \uC65C\uC9C0? \uC65C\uC9C0? \uC65C\uC9C0? \uC65C\uC9C0? \uC65C\uC9C0?
-      \uC65C\uC9C0? \uC65C\uC9C0? \uC65C\uC9C0? \uC65C\uC9C0? \uC65C\uC9C0? "
+    sentencetext: "\uC751? \uC751? \uC751? \uC751? \uC751? \uC751? \uC751? \uC751?
+      \uC751? \uC751? \uC751? \uC751? \uC751? \uC751? \uC751? \uC751? \uC751? \uC751?
+      \uC751? \uC751? \uC751? \uC751? \uC751? \uC751? \uC751? \uC751? \uC751? \uC751?
+      \uC751? \uC751? \uC751? \uC751? \uC751? \uC751? \uC751? \uC751? \uC751? \uC751?
+      \uC751? \uC751? \uC751? \uC751? \uC751? \uC751? \uC751? \uC751? \uC751? \uC751? "
     useEmotion: 1
     EmotionSetting:
     - character: 1
@@ -278,8 +279,8 @@ MonoBehaviour:
     useCustomEvent: 0
     Event: {fileID: 0}
   - nameText: 
-    sentencetext: "\uB09C \uC800\uB144\uD55C\uD14C \uC774\uB984\uC744 \uC54C\uB824\uC900\uC801\uC774
-      \uC5C6\uC5B4. \uD55C\uBC88\uB3C4 \uC5B8\uAE09\uD55C \uC801\uB3C4 \uC5C6\uC5B4. "
+    sentencetext: "\uC5B4? \uB09C \uC800\uB144\uD55C\uD14C \uC774\uB984\uC744 \uC54C\uB824\uC900\uC801\uC774
+      \uC5C6\uC5B4. \uD55C\uBC88\uB3C4 \uC5B8\uAE09\uD55C \uC801\uB3C4 \uC5C6\uB294\uB370?"
     useEmotion: 1
     EmotionSetting:
     - character: 1

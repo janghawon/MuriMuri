@@ -32,8 +32,11 @@ public class SulAAction : MonoBehaviour
     IEnumerator GhostCo()
     {
         yield return new WaitForSeconds(3);
+        SentenceManager.Instance.SetPanel();
         EXUIManager.Instance.SetPanelColor(Color.black);
         EXUIManager.Instance.FadePanel(true);
+        yield return new WaitForSeconds(2);
+        Application.Quit();
     }
 
     public void SCARE()

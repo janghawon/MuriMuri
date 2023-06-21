@@ -339,7 +339,7 @@ MonoBehaviour:
     Event: {fileID: 0}
   - nameText: "\uB098"
     sentencetext: "\uB3C4\uB07C? \uC774\uAC8C \uC65C?"
-    useEmotion: 1
+    useEmotion: 0
     EmotionSetting:
     - character: 1
       emotion: 2
@@ -361,7 +361,8 @@ MonoBehaviour:
     useCustomEvent: 0
     Event: {fileID: 0}
   - nameText: "\uB098"
-    sentencetext: "\uC751? \uBB54\uC18C\uB9AC\uC57C? \uC774\uAC78\uB85C \uB110 \uC8FD\uC77C\uAC74\uB370?"
+    sentencetext: "\uC751? \uBB34\uC2A8\uC18C\uB9AC\uC57C? \uC774\uAC78\uB85C \uB110
+      \uC8FD\uC77C\uAC74\uB370?"
     useEmotion: 1
     EmotionSetting:
     - character: 1
@@ -418,7 +419,7 @@ MonoBehaviour:
     useCustomEvent: 0
     Event: {fileID: 0}
   - nameText: "\uB098"
-    sentencetext: "\uC751? \uB098\uC57C\uB9D0\uB85C \uC774\uD574\uAC00 \uC548\uB418\uB294\uB370?"
+    sentencetext: "\uC544\uC9C1\uB3C4 \uC774\uD574\uAC00 \uC548\uB418\uB294\uAC70\uC57C?"
     useEmotion: 0
     EmotionSetting:
     - character: 1
@@ -453,7 +454,7 @@ MonoBehaviour:
     Event: {fileID: 0}
   - nameText: "\uB098"
     sentencetext: "\uBB34\uC2A8\uC18C\uB9AC\uACE0 \uC790\uC2DC\uACE0, \uB108 \uACE7
-      \uC8FD\uC744\uAC74\uB370?"
+      \uC8FD\uB294\uB2E4\uACE0."
     useEmotion: 1
     EmotionSetting:
     - character: 1
@@ -486,7 +487,7 @@ MonoBehaviour:
     useCustomEvent: 1
     Event: {fileID: 0}
   - nameText: "\uB098"
-    sentencetext: "\uCE5C\uAD6C \uBABB\uD574\uC918\uC11C \uBBF8\uC548\uD574. "
+    sentencetext: "\uC544 \u314B \uCE5C\uAD6C \uBABB\uD574\uC918\uC11C \uBBF8\uC548\uD574. "
     useEmotion: 0
     EmotionSetting:
     - character: 1
