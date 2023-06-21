@@ -430,7 +430,7 @@ MonoBehaviour:
     Event: {fileID: 0}
   - nameText: "\uB098"
     sentencetext: "\uB0B4\uAC00 \uB3C4\uB07C\uAE4C\uC9C0 \uB4E4\uC5C8\uC796\uC544.
-      \uC774\uAC74 \uB0B4\uAC00 \uC5EC\uAE30 \uB178\uB3E0\uB454 \uB3C4\uB07C\uC57C."
+      \uC774\uAC74 \uB0B4\uAC00 \uC5EC\uAE30 \uB193\uC544\uB454 \uB3C4\uB07C\uC57C."
     useEmotion: 0
     EmotionSetting:
     - character: 1
@@ -486,7 +486,7 @@ MonoBehaviour:
     useCustomEvent: 1
     Event: {fileID: 0}
   - nameText: "\uB098"
-    sentencetext: "\uC544 \uB9DE\uB2E4. \uCE5C\uAD6C \uBABB\uD574\uC918\uC11C \uBBF8\uC548\uD574. "
+    sentencetext: "\uCE5C\uAD6C \uBABB\uD574\uC918\uC11C \uBBF8\uC548\uD574. "
     useEmotion: 0
     EmotionSetting:
     - character: 1

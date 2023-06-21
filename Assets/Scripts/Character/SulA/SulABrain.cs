@@ -39,10 +39,4 @@ public class SulABrain : CharacterBrain
             SetAction();
         }
     }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(transform.position + transform.up * 0.5f, transform.lossyScale * 5);
-    }
 }

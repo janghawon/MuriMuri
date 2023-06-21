@@ -12,12 +12,13 @@ public class CustomEventManager : MonoBehaviour
     [SerializeField] private GameObject _axe;
     TextSystem _textSystem;
     public Action[] ActionList = new Action[25];
+    CharacterController _cc;
     private void Awake()
     {
+        _cc = GameManager.Instance.Player.GetComponent<CharacterController>();
         _textSystem = GameObject.Find("UICANVAS").GetComponent<TextSystem>();
-        //ActionList[0] = TwelveCus;
-        //ActionList[1] = ThirdTenCus;
-        //ActionList[2] = ForTenCus;
+        //ActionList[0] = FiveTenCus;
+
         ActionList[0] = FirstCustom;
         ActionList[1] = FirstCustom;
         ActionList[2] = SecondCustom;
@@ -43,8 +44,6 @@ public class CustomEventManager : MonoBehaviour
         ActionList[22] = FourthCustom;
     }
 
-
-
     public void FiveTenCus()
     {
         StartCoroutine(FiveTenCusCo());
@@ -53,8 +52,15 @@ public class CustomEventManager : MonoBehaviour
     IEnumerator FiveTenCusCo()
     {
         _textSystem.canClick = false;
+        _cc.enabled = false;
         GameManager.Instance.Player.transform.position = new Vector3(-6.7f, -0.17f, 14f);
+        _cc.enabled = true;
+        CharacterManager.Instance.SulA.transform.position = new Vector3(30, 3, 5.7f);
+        GameObject.Find("BloodSprayFX(Clone)").SetActive(false);
+        GameObject.Find("axe(Clone)").SetActive(false);
+        EXUIManager.Instance.UseGlitch(false, Vector3.zero, Vector3.zero);
         GameManager.Instance.SetPlayerState(true, true, true);
+        yield return new WaitForSeconds(2);
         SentenceManager.Instance.SetPanel();
         yield return new WaitForSeconds(3);
         EXUIManager.Instance.FadePanel(false);

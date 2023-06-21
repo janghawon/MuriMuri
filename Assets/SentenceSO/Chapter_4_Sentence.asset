@@ -87,9 +87,7 @@ MonoBehaviour:
     useCustomEvent: 0
     Event: {fileID: 0}
   - nameText: 
-    sentencetext: "\uADF8\uB7F0\uAC74 \uC874\uC7AC\uD558\uC9C0 \uC54A\uC544. \uC2E4\uC81C\uB85C
-      \uD559\uAD50 \uB4B7\uD130\uB294 \uC0AC\uB78C\uB4E4\uC774 \uAF64 \uC790\uC8FC
-      \uB2E4\uB140\uC5C8\uB2E4."
+    sentencetext: "\uADF8\uB7F0\uAC74 \uC874\uC7AC\uD558\uC9C0 \uC54A\uC544."
     useEmotion: 0
     EmotionSetting: []
     PhaseEvent:
@@ -98,7 +96,8 @@ MonoBehaviour:
     useCustomEvent: 0
     Event: {fileID: 0}
   - nameText: 
-    sentencetext: "\uD558\uC9C0\uB9CC \uC774\uC820 \uC544\uB2C8\uC57C. "
+    sentencetext: "\uC2DC\uC544\uC57C. \uC0AC\uC2E4 \uD559\uAD50 \uB4B7\uD130\uB294
+      \uC0AC\uB78C\uC774 \uAF64 \uC790\uC8FC \uC624\uB294\uACF3\uC774\uC5C8\uC5B4."
     useEmotion: 0
     EmotionSetting: []
     PhaseEvent:
@@ -107,7 +106,8 @@ MonoBehaviour:
     useCustomEvent: 0
     Event: {fileID: 0}
   - nameText: 
-    sentencetext: "\uC774\uC820 \uB098\uB9CC \uC624\uB294 \uACF3\uC774 \uB410\uC5B4. "
+    sentencetext: "\uD558\uC9C0\uB9CC.. \uB0B4\uAC00 \uB108\uD55C\uD14C \uB9D0\uD55C
+      \uAC83\uB4E4\uC740 \uC804\uBD80 \uC0AC\uC2E4\uC774\uC57C."
     useEmotion: 0
     EmotionSetting: []
     PhaseEvent:
@@ -116,8 +116,8 @@ MonoBehaviour:
     useCustomEvent: 0
     Event: {fileID: 0}
   - nameText: 
-    sentencetext: "\uAC15\uC2DC\uC544\uC758 \uC2DC\uCCB4\uB3C4 \uC798 \uBB3B\uC5B4
-      \uC92C\uC73C\uB2C8 \uC544\uBB34\uB3C4 \uBAA8\uB97C\uAC70\uC57C."
+    sentencetext: "\uC2DC\uC544\uC57C.  \uC2DC\uCCB4\uB3C4 \uC798 \uBB3B\uC5B4 \uC92C\uC73C\uB2C8
+      \uC544\uBB34\uB3C4 \uBAA8\uB97C\uAC70\uC57C."
     useEmotion: 0
     EmotionSetting: []
     PhaseEvent:
@@ -126,7 +126,8 @@ MonoBehaviour:
     useCustomEvent: 0
     Event: {fileID: 0}
   - nameText: 
-    sentencetext: "\uC9C0\uAE08\uAE4C\uC9C0\uB3C4 \uBCC4 \uBB38\uC81C \uC5C6\uC5C8\uC796\uC544?"
+    sentencetext: "\uC9C0\uAE08\uAE4C\uC9C0 \uB531\uD788 \uBCC4 \uBB38\uC81C \uC5C6\uC5C8\uC796\uC544?
+      \uADF8\uB7EC\uB2C8 \uAD1C\uCC2E\uC544."
     useEmotion: 0
     EmotionSetting: []
     PhaseEvent:
@@ -222,9 +223,9 @@ MonoBehaviour:
     - character: 1
       emotion: 3
     PhaseEvent:
-      usePhaseEvent: 0
+      usePhaseEvent: 1
       character: 1
-    useCustomEvent: 1
+    useCustomEvent: 0
     Event: {fileID: 0}
   - nameText: 
     sentencetext: "\uC65C\uC9C0? \uC65C\uC9C0? \uC65C\uC9C0? \uC65C\uC9C0? \uC65C\uC9C0?
@@ -318,7 +319,7 @@ MonoBehaviour:
     - character: 1
       emotion: 2
     PhaseEvent:
-      usePhaseEvent: 0
+      usePhaseEvent: 1
       character: 1
-    useCustomEvent: 1
+    useCustomEvent: 0
     Event: {fileID: 0}

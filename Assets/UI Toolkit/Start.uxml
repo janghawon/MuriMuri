@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/Start.uss?fileID=7433441132597879392&amp;guid=48afacf82c442b341ab38f7c658698e8&amp;type=3#Start" />
+    <ui:VisualElement name="Root" style="position: absolute;">
+        <ui:Button text="시작하기" display-tooltip-when-elided="true" name="StartBtn" style="position: absolute; width: 600px; height: 150px; top: 560px; left: 64px; font-size: 60px; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); border-top-left-radius: 20px; border-bottom-left-radius: 20px; border-top-right-radius: 20px; border-bottom-right-radius: 20px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0);" />
+        <ui:Button text="도망치기" display-tooltip-when-elided="true" name="ExitBtn" style="position: absolute; width: 600px; height: 150px; top: 800px; left: 64px; font-size: 60px; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); border-top-left-radius: 20px; border-bottom-left-radius: 20px; border-top-right-radius: 20px; border-bottom-right-radius: 20px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0);" />
+    </ui:VisualElement>
+</ui:UXML>

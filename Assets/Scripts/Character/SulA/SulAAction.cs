@@ -8,6 +8,7 @@ using DG.Tweening;
 public class SulAAction : MonoBehaviour
 {
     [SerializeField] private GameObject _booldEffect;
+    [SerializeField] private GameObject _black;
     SulABrain _brain;
     TextSystem textSystem;
     public List<UnityEvent> ActionDataList = new List<UnityEvent>();
@@ -17,6 +18,22 @@ public class SulAAction : MonoBehaviour
     {
         textSystem = GameObject.Find("UICANVAS").GetComponent<TextSystem>();
         _brain = GetComponent<SulABrain>();
+    }
+
+    public void Ghost()
+    {
+        EXUIManager.Instance.UseGlitch(transform, new Vector3(5.8f, 4.2f, -6.3f), new Vector3(0, 75, 0));
+        GameObject _b = Instantiate(_black);
+        _b.transform.position = new Vector3(8.48f, 4.13f, -5.7f);
+        _b.transform.rotation = Quaternion.Euler(0, -14.116f, 0);
+        StartCoroutine(GhostCo());
+    }
+
+    IEnumerator GhostCo()
+    {
+        yield return new WaitForSeconds(3);
+        EXUIManager.Instance.SetPanelColor(Color.black);
+        EXUIManager.Instance.FadePanel(true);
     }
 
     public void SCARE()
@@ -59,7 +76,10 @@ public class SulAAction : MonoBehaviour
 
     public void Chapter2Start()
     {
+        CharacterController _cc = GameManager.Instance.Player.GetComponent<CharacterController>();
+        _cc.enabled = false;
         GameManager.Instance.Player.transform.position = new Vector3(6.5f, 2.83f, -7.7f);
+        _cc.enabled = true;
         CharacterManager.Instance.SulA.transform.position = new Vector3(9, 2.9f, -8.2f);
         CharacterManager.Instance.SitSet(CharacterType.SulA, false);
         SentenceManager.Instance.SetPanel();
