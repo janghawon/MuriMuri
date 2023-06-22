@@ -10,6 +10,4 @@ public class PosManager : MonoBehaviour
         Chapter2BackPos pos = GameObject.Find("SchoolBackPos").GetComponent<Chapter2BackPos>();
         pos.gameObject.SetActive(false);
     }
-
-    
 }
